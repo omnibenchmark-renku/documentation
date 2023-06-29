@@ -1,0 +1,2 @@
+# Omnibenchmark documentation
+

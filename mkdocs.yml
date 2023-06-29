@@ -1,0 +1,57 @@
+site_name: Omnibenchmark
+site_url: https://example.com/
+nav:
+    - Motivation: 01_landing.md
+    - Getting started:  
+        - 01_getting_started/index.md
+        - Module contributor: 
+            - 01_getting_started/01_module_contr/index.md
+            - Start from templates: 01_getting_started/01_module_contr/templates.md
+            - Project setup: 01_getting_started/01_module_contr/project_setup.md
+            - Config.yaml file: 01_getting_started/01_module_contr/config_yaml.md
+            - Modules: 
+                - 01_getting_started/01_module_contr/modules/index.md
+                - Input data: 01_getting_started/01_module_contr/modules/01_data.md
+                - Methods:  01_getting_started/01_module_contr/modules/02_method.md
+                - Metrics:  01_getting_started/01_module_contr/modules/03_metric.md
+                - Submission:  01_getting_started/01_module_contr/modules/04_submit.md
+        - Benchmarker: 
+            - 01_getting_started/02_benchmarker/index.md
+        - Method user: 
+            - 01_getting_started/03_method_user/index.md
+            
+    - Advanced: 
+        - 02_advanced/index.md
+        - Module contributor: 
+            - 02_advanced/01_module_contr/index.md
+            - The omniObject: 
+                - 02_advanced/01_module_contr/omni_object/index.md
+                - OmniObject: 02_advanced/01_module_contr/omni_object/classes/01_omni_object.md
+                - OmniInput: 02_advanced/01_module_contr/omni_object/classes/02_omni_input.md
+                - OmniParameters: 02_advanced/01_module_contr/omni_object/classes/03_omni_parameter.md
+                - OmniOutput: 02_advanced/01_module_contr/omni_object/classes/04_omni_output.md
+                - OmniCommand: 02_advanced/01_module_contr/omni_object/classes/05_omni_command.md
+                - OmniPlan: 02_advanced/01_module_contr/omni_object/classes/06_omni_plan.md
+        - Benchmarker: 
+            - 02_advanced/02_benchmarker/index.md
+        - Method user: 
+            - 02_advanced/03_method_user/index.md
+        
+    - How-to guides: 
+        - 03_howto/index.md
+        - Build object: 03_howto/01_build_object.md
+        - Create dataset: 03_howto/02_create_dataset.md
+        - Generate workflow: 03_howto/03_generate_workflow.md
+        - Update object: 03_howto/04_update_object.md
+        - Filter: 03_howto/05_filter.md
+    - Common bugs: 
+        - 04_bugs/index.md
+    - About: about.md
+
+theme:
+    name: material
+    features:
+    - navigation.indexes
+    - navigation.tabs
+    - toc.integrate 
+    logo: images/omb.png
