@@ -18,6 +18,8 @@ This repo serves: https://omnibenchmark.github.io/documentation/
 
     `mkdocs gh-deploy`
 
+    The deployment may take some time. You can check the progress on the [deployment history](https://github.com/omnibenchmark/documentation/deployments/activity_log?environment=github-pages). 
+
 4) commit and push your changes. 
 
 

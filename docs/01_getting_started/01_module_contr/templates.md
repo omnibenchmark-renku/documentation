@@ -17,21 +17,21 @@ The following steps will show you how to create a new Omnibenchmark project for 
 
 1. On `Renku <https://renkulab.io/>`_ start a new project by clicking the "+" symbol and add a tittle and a description to your project (this will appear under your project title in your list of projects). 
 
-.. image:: ../_static/images/datatemplate0.png
+![image](https://raw.githubusercontent.com/omnibenchmark/documentation/master/docs/images/datatemplate0.png)
 
-2. On the "New project" page, fill in the required information. Under "Repository URL", indicate https://github.com/ansonrel/contributed-project-templates
+2. On the "New project" page, fill in the required information. Under "Repository URL", indicate https://github.com/omnibenchmark/contributed-project-templates
 
 3. Under "Repository Reference", indicate "main".
 
 4. Fetch the templates. 
 
-.. image:: ../_static/images/datatemplate1.png
+![image](https://raw.githubusercontent.com/omnibenchmark/documentation/master/docs/images/datatemplate1.png)
 
 5. Once completed, select the desired omnibenchmark template (here as example, the "Basic omnibenchmark dataset" template to add a new dataset) and add all metadata that are required (you will be able to modify them latter if needed).
 
 6. Create your project.
 
-.. image:: ../_static/images/datatemplate2.png
+![image](https://raw.githubusercontent.com/omnibenchmark/documentation/master/docs/images/datatemplate2.png)
 
 7. The template will generate a new project will all the required tools for you to extend omnibenchmark. You will find further instructions in the dedicated `Module documentation <https://omnibenchmark.readthedocs.io/en/latest/start/02_omnibenchmark_modules.html>`_ , which will depend on the template that you selected. 
 

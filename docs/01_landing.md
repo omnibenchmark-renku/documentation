@@ -27,8 +27,11 @@ Some key features of our benchmarking framework:
 
 - Flexibility to work with different benchmarking structures, topics and programming languages.
 
-## Prototype
+## Prototypes
 
-We are currently building a prototype for community-based
-benchmarking of single cell batch correction methods. The research in single-cell is a perfect use-case, where more than 1000 tools have been developed in only a few years (see  for e.g. [scrna-tools](https://www.scrna-tools.org/))  and where the benchmarking efforts are often **not coordinated** , **not extendable**
-and **not reproducible**.
+We are currently building multiple prototypes for community-based
+benchmarking of single cell batch correction methods. 
+
+The list of current benchmarks and their results can be explored on the official Omnibenchmark website: 
+
+[http://omnibenchmark.org/](http://omnibenchmark.org/)

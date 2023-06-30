@@ -21,4 +21,4 @@ If you are interested in exploring one of the existing benchmarks and
 the latest results, you can directly jump to the results of our
 evaluations in the `Output` section.
 
-![image](/images/omnibench_overview.png)
+![image](https://raw.githubusercontent.com/omnibenchmark/documentation/master/docs/images/omnibench_overview.png)
