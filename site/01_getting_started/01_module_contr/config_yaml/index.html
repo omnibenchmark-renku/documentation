@@ -138,6 +138,18 @@
 </div>
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/omnibenchmark/documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    omnibenchmark/documentation
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -224,7 +236,7 @@
   
     <li class="md-tabs__item">
       <a href="../../../04_bugs/" class="md-tabs__link">
-        Common bugs
+        Common issues
       </a>
     </li>
   
@@ -272,6 +284,18 @@
     </a>
     Omnibenchmark
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/omnibenchmark/documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    omnibenchmark/documentation
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -1144,22 +1168,74 @@
             
           
         
+          
+        
+          
+        
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../04_bugs/">Common bugs</a>
+          <a href="../../../04_bugs/">Common issues</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
           
         </div>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          Common bugs
+          Common issues
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04_bugs/01_templates/" class="md-nav__link">
+        Templates project creation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04_bugs/02_python/" class="md-nav__link">
+        Python CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04_bugs/03_renku_interface/" class="md-nav__link">
+        Renku interface
+      </a>
+    </li>
+  
+
             
           
         </ul>
@@ -1197,103 +1273,105 @@
                 
                   
 
+  
+  
 
-<p>(section-config)=</p>
+
 <h1 id="the-configyaml-file">The config.yaml file</h1>
 <p>Usually all specific information about a benchmark project can be specified in a <code>config.yaml</code> file. Below we show an example with all standard fields and explanations to them. Many fields are optional and do not apply to all modules. All unneccessary fields can be skipped. There are further optional fields for specfic edge cases, that are described in an extra <code>config.yaml</code> file. In general the <code>config.yaml</code> file consists of a data, an input, an output and a parameter section as well as a few extra fields to define the main benchmark script and benchmark type. Except for the data section the other sections are optional. Multiple values can be parsed as lists.</p>
-<pre><code class="language-yaml"># Data section to describe the object and the associated (result) dataset
-data:
-    # Name of the dataset
-    name: &quot;out_dataset&quot;
-    # Title of the dataset (Optional)
-    title: &quot;Output of an example OmniObject&quot;
-    # Description of the dataset (Optional)
-    description: &quot;This dataset is supposed to store the output files from the example omniobject&quot;
-    # Dataset keyword(s) to make this dataset reachable for other projects/benhcmark components
-    keywords: [&quot;example_dataset&quot;]
-# Script to be run by the workflow associated to the project
-script: &quot;path/to/method/dataset/metric/script.py&quot;
-# Interpreter to run the script (Optional, automatic detection)
-interpreter: &quot;python&quot;
-# Benchmark that the object is associated to.
-benchmark_name: &quot;omni_celltype&quot;
-# Orchestrator url of the benchmark (Optional, automatic detection)
-orchestrator: &quot;https://www.orchestrator_url.com&quot;
-# Input section to describe output file types. (Optional)
-inputs:
-    # Keyword to find input datasets, that shall be imported 
-    keywords: [&quot;import_this&quot;, &quot;import_that&quot;]
-    # Input file types
-    files: [&quot;count_file&quot;, &quot;dim_red_file&quot;]
-    # Prefix (part of the filename is sufficient) to automatically detect file types by their names
-    prefix:
-        count_file: &quot;counts&quot;
-        dim_red_file: [&quot;features&quot;, &quot;genes&quot;]
-# Output section to describe output file types. (Optional)
-outputs:
-    # Output filetypes and their endings
-    files:
-        corrected_counts: 
-            end: &quot;.mtx.gz&quot;
-        meta:
-            end: &quot;.json&quot;
-# Parameter section to describe the parameter dataset, values and filter. (Optional)
-parameter:
-    # Names of the parameter to use
-    names: [&quot;param1&quot;, &quot;param2&quot;]
-    # Keyword(s) used to import the parameter dataset
-    keywords: [&quot;param_dataset&quot;]
-    # Filter that specify limits, values or combinations to exclude
-    filter:
-        param1:
-            upper: 50
-            lower: 3
-            exclude: 12
-    param2:
-        &quot;path/to/file/with/parameter/combinations/to/exclude.json&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># Data section to describe the object and the associated (result) dataset</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Name of the dataset</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;out_dataset&quot;</span>
+<span class="w">    </span><span class="c1"># Title of the dataset (Optional)</span>
+<span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Output</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">OmniObject&quot;</span>
+<span class="w">    </span><span class="c1"># Description of the dataset (Optional)</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;This</span><span class="nv"> </span><span class="s">dataset</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">supposed</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">store</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">output</span><span class="nv"> </span><span class="s">files</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">example</span><span class="nv"> </span><span class="s">omniobject&quot;</span>
+<span class="w">    </span><span class="c1"># Dataset keyword(s) to make this dataset reachable for other projects/benhcmark components</span>
+<span class="w">    </span><span class="nt">keywords</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;example_dataset&quot;</span><span class="p p-Indicator">]</span>
+<span class="c1"># Script to be run by the workflow associated to the project</span>
+<span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;path/to/method/dataset/metric/script.py&quot;</span>
+<span class="c1"># Interpreter to run the script (Optional, automatic detection)</span>
+<span class="nt">interpreter</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;python&quot;</span>
+<span class="c1"># Benchmark that the object is associated to.</span>
+<span class="nt">benchmark_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;omni_celltype&quot;</span>
+<span class="c1"># Orchestrator url of the benchmark (Optional, automatic detection)</span>
+<span class="nt">orchestrator</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://www.orchestrator_url.com&quot;</span>
+<span class="c1"># Input section to describe output file types. (Optional)</span>
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Keyword to find input datasets, that shall be imported </span>
+<span class="w">    </span><span class="nt">keywords</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;import_this&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;import_that&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="c1"># Input file types</span>
+<span class="w">    </span><span class="nt">files</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;count_file&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;dim_red_file&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="c1"># Prefix (part of the filename is sufficient) to automatically detect file types by their names</span>
+<span class="w">    </span><span class="nt">prefix</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">count_file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;counts&quot;</span>
+<span class="w">        </span><span class="nt">dim_red_file</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;features&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;genes&quot;</span><span class="p p-Indicator">]</span>
+<span class="c1"># Output section to describe output file types. (Optional)</span>
+<span class="nt">outputs</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Output filetypes and their endings</span>
+<span class="w">    </span><span class="nt">files</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">corrected_counts</span><span class="p">:</span><span class="w"> </span>
+<span class="w">            </span><span class="nt">end</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;.mtx.gz&quot;</span>
+<span class="w">        </span><span class="nt">meta</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">end</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;.json&quot;</span>
+<span class="c1"># Parameter section to describe the parameter dataset, values and filter. (Optional)</span>
+<span class="nt">parameter</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Names of the parameter to use</span>
+<span class="w">    </span><span class="nt">names</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;param1&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;param2&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="c1"># Keyword(s) used to import the parameter dataset</span>
+<span class="w">    </span><span class="nt">keywords</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;param_dataset&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="c1"># Filter that specify limits, values or combinations to exclude</span>
+<span class="w">    </span><span class="nt">filter</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">param1</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">upper</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">            </span><span class="nt">lower</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">            </span><span class="nt">exclude</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">12</span>
+<span class="w">    </span><span class="nt">param2</span><span class="p">:</span>
+<span class="w">        </span><span class="s">&quot;path/to/file/with/parameter/combinations/to/exclude.json&quot;</span>
+</code></pre></div>
 <p>Specific fields, that are only relevant for edge cases. These fields have their counterparts in the generated {ref}<code>OmniObject &lt;section-classes&gt;</code>.
 Changes of the attributes of the OmniObject instance have the same effects, but come with the flexibility of python code. </p>
-<pre><code class="language-yaml"># Command to generate the workflow with (Optional, automatic detection)
-command_line: &quot;python path/to/method/dataset/metric/script.py --count_file data/import_this_dataset/...mtx.gz&quot;
-inputs:
-    # Datasets and manual file type specifications (automatic detection!)
-    input_files:
-        import_this_dataset:
-            count_file: &quot;data/import_this_dataset/import_this_dataset__counts.mtx.gz&quot;
-            dim_red_file: &quot;data/import_this_dataset/import_this_dataset__dim_red_file.json&quot;
-    # (Dataset) name that default input files belong to (Optional, automatic detection)
-    default: &quot;import_this_dataset&quot;
-    # Input dataset names that should be ignored (even if they have one of the specified input keywords assciated)
-    filter_names: [&quot;data1&quot;, &quot;data2&quot;]
-outputs:
-    # Template to automatically generate output filenames (Optional - recommended for advanced user only)
-    template: &quot;data/${name}/${name}_${unique_values}_${out_name}.${out_end}&quot;
-    # Variables used for automatic output filename generation (Optional - recommended for advanced user only)
-    template_vars:
-        vars1: &quot;random&quot;
-        vars2: &quot;variable&quot;
-    # Manual specification of mapping for output files and their corresponding input files and parameter values (automatic detection!)
-    file_mapping:
-        mapping1: 
-            output_files:
-                corrected_counts: &quot;data/out_dataset/out_dataset_import_this__param1_10__param2_test_corrected_counts.mtx.gz&quot;
-                meta: &quot;data/out_dataset/out_dataset_import_this__param1_10__param2_test_meta.json&quot;
-        input_files:
-            count_file: &quot;data/import_this_dataset/import_this_dataset__counts.mtx.gz&quot;
-            dim_red_file: &quot;data/import_this_dataset/import_this_dataset__dim_red_file.json&quot;
-        parameter:
-            param1: 10
-            param2: &quot;test&quot;
-    # Default output files (Optional, automatic detection)
-    default:
-        corrected_counts: &quot;data/out_dataset/out_dataset_import_this__param1_10__param2_test_corrected_counts.mtx.gz&quot;
-        meta: &quot;data/out_dataset/out_dataset_import_this__param1_10__param2_test_meta.json&quot;
-parameter:
-    default:
-        param1: 10
-        param2: &quot;test&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="c1"># Command to generate the workflow with (Optional, automatic detection)</span>
+<span class="nt">command_line</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;python</span><span class="nv"> </span><span class="s">path/to/method/dataset/metric/script.py</span><span class="nv"> </span><span class="s">--count_file</span><span class="nv"> </span><span class="s">data/import_this_dataset/...mtx.gz&quot;</span>
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Datasets and manual file type specifications (automatic detection!)</span>
+<span class="w">    </span><span class="nt">input_files</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">import_this_dataset</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">count_file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;data/import_this_dataset/import_this_dataset__counts.mtx.gz&quot;</span>
+<span class="w">            </span><span class="nt">dim_red_file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;data/import_this_dataset/import_this_dataset__dim_red_file.json&quot;</span>
+<span class="w">    </span><span class="c1"># (Dataset) name that default input files belong to (Optional, automatic detection)</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;import_this_dataset&quot;</span>
+<span class="w">    </span><span class="c1"># Input dataset names that should be ignored (even if they have one of the specified input keywords assciated)</span>
+<span class="w">    </span><span class="nt">filter_names</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;data1&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;data2&quot;</span><span class="p p-Indicator">]</span>
+<span class="nt">outputs</span><span class="p">:</span>
+<span class="w">    </span><span class="c1"># Template to automatically generate output filenames (Optional - recommended for advanced user only)</span>
+<span class="w">    </span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;data/${name}/${name}_${unique_values}_${out_name}.${out_end}&quot;</span>
+<span class="w">    </span><span class="c1"># Variables used for automatic output filename generation (Optional - recommended for advanced user only)</span>
+<span class="w">    </span><span class="nt">template_vars</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">vars1</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;random&quot;</span>
+<span class="w">        </span><span class="nt">vars2</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;variable&quot;</span>
+<span class="w">    </span><span class="c1"># Manual specification of mapping for output files and their corresponding input files and parameter values (automatic detection!)</span>
+<span class="w">    </span><span class="nt">file_mapping</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">mapping1</span><span class="p">:</span><span class="w"> </span>
+<span class="w">            </span><span class="nt">output_files</span><span class="p">:</span>
+<span class="w">                </span><span class="nt">corrected_counts</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;data/out_dataset/out_dataset_import_this__param1_10__param2_test_corrected_counts.mtx.gz&quot;</span>
+<span class="w">                </span><span class="nt">meta</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;data/out_dataset/out_dataset_import_this__param1_10__param2_test_meta.json&quot;</span>
+<span class="w">        </span><span class="nt">input_files</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">count_file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;data/import_this_dataset/import_this_dataset__counts.mtx.gz&quot;</span>
+<span class="w">            </span><span class="nt">dim_red_file</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;data/import_this_dataset/import_this_dataset__dim_red_file.json&quot;</span>
+<span class="w">        </span><span class="nt">parameter</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">param1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">            </span><span class="nt">param2</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;test&quot;</span>
+<span class="w">    </span><span class="c1"># Default output files (Optional, automatic detection)</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">corrected_counts</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;data/out_dataset/out_dataset_import_this__param1_10__param2_test_corrected_counts.mtx.gz&quot;</span>
+<span class="w">        </span><span class="nt">meta</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;data/out_dataset/out_dataset_import_this__param1_10__param2_test_meta.json&quot;</span>
+<span class="nt">parameter</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">default</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">param1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">        </span><span class="nt">param2</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;test&quot;</span>
+</code></pre></div>
 
 
 
