@@ -138,6 +138,18 @@
 </div>
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/omnibenchmark/documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    omnibenchmark/documentation
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -224,7 +236,7 @@
   
     <li class="md-tabs__item">
       <a href="../../../../04_bugs/" class="md-tabs__link">
-        Common bugs
+        Common issues
       </a>
     </li>
   
@@ -272,6 +284,18 @@
     </a>
     Omnibenchmark
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/omnibenchmark/documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    omnibenchmark/documentation
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -1205,22 +1229,74 @@
             
           
         
+          
+        
+          
+        
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../04_bugs/">Common bugs</a>
+          <a href="../../../../04_bugs/">Common issues</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
           
         </div>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          Common bugs
+          Common issues
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../04_bugs/01_templates/" class="md-nav__link">
+        Templates project creation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../04_bugs/02_python/" class="md-nav__link">
+        Python CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../04_bugs/03_renku_interface/" class="md-nav__link">
+        Renku interface
+      </a>
+    </li>
+  
+
             
           
         </ul>
@@ -1258,149 +1334,152 @@
                 
                   
 
+  
+  
+
 
 <h1 id="metric-modules">Metric modules</h1>
 <p>A metric module imports method result datasets and runs one evaluation on them. Evaluation results are added to a <a href="https://renku.readthedocs.io/en/latest/topic-guides/data.html#">renku dataset</a>, that can be summarized and explored in an {ref}<code>omnibenchmark bettr dashboard &lt;section-output&gt;</code>. Benchmark specific requirements like file formats, types and prefixes can be checked at the <a href="https://omnibenchmark.pages.uzh.ch/omni_dash/index.html">omnibenchmark webside</a>. Usually a metric module contains two workflows, one to evaluate the results and one to generate the <strong><code>metric info file</code></strong>. Most metric modules contain 5 main files:</p>
 <h2 id="1-the-configyaml-file">1. The config.yaml file</h2>
 <p>All information about the module are specified in the {ref}<code>config.yaml file &lt;section-config&gt;</code>:</p>
-<pre><code class="language-yaml">---
-data:
-    name: &quot;metric name&quot;
-    title: &quot;metric title&quot;
-    description: &quot;Short description of the metric&quot;
-    keywords: [&quot;MODULE_KEY&quot;]
-script: &quot;path/to/module_script&quot;
-benchmark_name: &quot;OMNIBENCHMARK_TYPE&quot;
-inputs:
-    keywords: [&quot;INPUT_KEY1&quot;, &quot;INPUT_KEY2&quot;]
-    files: [&quot;input_file_name1&quot;, &quot;input_file_name2&quot;]
-    prefix:
-        input_file_name1: &quot;_INPUT1_&quot;
-        input_file_name2: &quot;_INPUT2_&quot;
-outputs:
-    files:
-        metric_result: 
-            end: &quot;FILE1_END&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;metric</span><span class="nv"> </span><span class="s">name&quot;</span>
+<span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;metric</span><span class="nv"> </span><span class="s">title&quot;</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Short</span><span class="nv"> </span><span class="s">description</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">metric&quot;</span>
+<span class="w">    </span><span class="nt">keywords</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;MODULE_KEY&quot;</span><span class="p p-Indicator">]</span>
+<span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;path/to/module_script&quot;</span>
+<span class="nt">benchmark_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;OMNIBENCHMARK_TYPE&quot;</span>
+<span class="nt">inputs</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">keywords</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;INPUT_KEY1&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;INPUT_KEY2&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">files</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;input_file_name1&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;input_file_name2&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">prefix</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">input_file_name1</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;_INPUT1_&quot;</span>
+<span class="w">        </span><span class="nt">input_file_name2</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;_INPUT2_&quot;</span>
+<span class="nt">outputs</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">files</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">metric_result</span><span class="p">:</span><span class="w"> </span>
+<span class="w">            </span><span class="nt">end</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;FILE1_END&quot;</span>
+</code></pre></div>
 <p>Entries in capital letters depend on the specifications at the <a href="https://omnibenchmark.pages.uzh.ch/omni_dash/index.html">omnibenchmark webside</a>.</p>
 <h2 id="2-the-info_configyaml-file">2. The info_config.yaml file</h2>
 <p>All information about the module are specified in the {ref}<code>config.yaml file &lt;section-config&gt;</code>:</p>
-<pre><code class="language-yaml">---
-data:
-    name: &quot;metric name&quot;
-script: &quot;src/generate_metric_info.py&quot;
-benchmark_name: &quot;OMNIBENCHMARK_TYPE&quot;
-outputs:
-    files:
-        metric_info: 
-            end: &quot;json&quot;
-    file_mapping:
-        mapping1:
-          output_files:
-            metric_info: &quot;path/to/metric_name_info.json&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;metric</span><span class="nv"> </span><span class="s">name&quot;</span>
+<span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;src/generate_metric_info.py&quot;</span>
+<span class="nt">benchmark_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;OMNIBENCHMARK_TYPE&quot;</span>
+<span class="nt">outputs</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">files</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">metric_info</span><span class="p">:</span><span class="w"> </span>
+<span class="w">            </span><span class="nt">end</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;json&quot;</span>
+<span class="w">    </span><span class="nt">file_mapping</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">mapping1</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">output_files</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">metric_info</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;path/to/metric_name_info.json&quot;</span>
+</code></pre></div>
 <h2 id="3-the-run_workflowpy-file">3. The run_workflow.py file</h2>
 <p>This file is to generate, run and update the modules dataset and workflow. A most basic script to do so looks like this:</p>
-<pre><code class="language-python"># Load modules
-from omnibenchmark.utils.build_omni_object import get_omni_object_from_yaml
-from omnibenchmark.renku_commands.general import renku_save
+<div class="highlight"><pre><span></span><code><span class="c1"># Load modules</span>
+<span class="kn">from</span> <span class="nn">omnibenchmark.utils.build_omni_object</span> <span class="kn">import</span> <span class="n">get_omni_object_from_yaml</span>
+<span class="kn">from</span> <span class="nn">omnibenchmark.renku_commands.general</span> <span class="kn">import</span> <span class="n">renku_save</span>
 
-# Build an OmniObject from the config.yaml file
-omni_obj = get_omni_object_from_yaml('src/config.yaml')
+<span class="c1"># Build an OmniObject from the config.yaml file</span>
+<span class="n">omni_obj</span> <span class="o">=</span> <span class="n">get_omni_object_from_yaml</span><span class="p">(</span><span class="s1">&#39;src/config.yaml&#39;</span><span class="p">)</span>
 
-# Import and update inputs/parameter and update object accordingly 
-omni_obj.update_object()
-renku_save()
+<span class="c1"># Import and update inputs/parameter and update object accordingly </span>
+<span class="n">omni_obj</span><span class="o">.</span><span class="n">update_object</span><span class="p">()</span>
+<span class="n">renku_save</span><span class="p">()</span>
 
-# Create the output dataset
-omni_obj.create_dataset()
-renku_save()
+<span class="c1"># Create the output dataset</span>
+<span class="n">omni_obj</span><span class="o">.</span><span class="n">create_dataset</span><span class="p">()</span>
+<span class="n">renku_save</span><span class="p">()</span>
 
-## Run and update the workflow on all inputs and parameter combinations
-omni_obj.run_renku()
-renku_save()
+<span class="c1">## Run and update the workflow on all inputs and parameter combinations</span>
+<span class="n">omni_obj</span><span class="o">.</span><span class="n">run_renku</span><span class="p">()</span>
+<span class="n">renku_save</span><span class="p">()</span>
 
-## Add files to output dataset
-omni_obj.update_result_dataset()
-renku_save()
+<span class="c1">## Add files to output dataset</span>
+<span class="n">omni_obj</span><span class="o">.</span><span class="n">update_result_dataset</span><span class="p">()</span>
+<span class="n">renku_save</span><span class="p">()</span>
 
-###################### Generate info file ######################
-# Build an OmniObject from the info_config.yaml file
-omni_info = get_omni_object_from_yaml('src/info_config.yaml')
-omni_info.wflow_name = &quot;metric_info&quot;
+<span class="c1">###################### Generate info file ######################</span>
+<span class="c1"># Build an OmniObject from the info_config.yaml file</span>
+<span class="n">omni_info</span> <span class="o">=</span> <span class="n">get_omni_object_from_yaml</span><span class="p">(</span><span class="s1">&#39;src/info_config.yaml&#39;</span><span class="p">)</span>
+<span class="n">omni_info</span><span class="o">.</span><span class="n">wflow_name</span> <span class="o">=</span> <span class="s2">&quot;metric_info&quot;</span>
 
-## Run and update workflow
-omni_info.run_renku()
-renku_save()
+<span class="c1">## Run and update workflow</span>
+<span class="n">omni_info</span><span class="o">.</span><span class="n">run_renku</span><span class="p">()</span>
+<span class="n">renku_save</span><span class="p">()</span>
 
-## Update output dataset 
-omni_info.update_result_dataset()
-renku_save()
-</code></pre>
+<span class="c1">## Update output dataset </span>
+<span class="n">omni_info</span><span class="o">.</span><span class="n">update_result_dataset</span><span class="p">()</span>
+<span class="n">renku_save</span><span class="p">()</span>
+</code></pre></div>
 <h2 id="4-the-module-script">4. The module script</h2>
 <p>This is the script to load the dataset and to convert its files into the expected format.
 Omnibenchmark accepts any kind of script and its maintenance and content is up to the module author.
 Omnibenchmark calls this script from the command line. If you use another language than R, Python, Julia or bash, specify the interpreter to use in the corresponding field of the {ref}<code>config.yaml file &lt;section-config&gt;</code> file.</p>
-<p>:::note
-All input and output files and if applicable parameter need to be parsed from the command line in the format:
-<code>--ARGUMENT_NAME ARGUMENT_VALUE</code>
-:::</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All input and output files and if applicable parameter need to be parsed from the command line in the format:
+<code>--ARGUMENT_NAME ARGUMENT_VALUE</code></p>
+</div>
 <p>In Python <a href="https://pypi.org/project/argparse/">argparse</a> can be used to parse command arguments like this:</p>
-<pre><code class="language-python"># Load module
-import argparse
+<div class="highlight"><pre><span></span><code><span class="c1"># Load module</span>
+<span class="kn">import</span> <span class="nn">argparse</span>
 
-# Get command line arguments and store them in args
-parser=argparse.ArgumentParser()
-parser.add_argument('--argument_name', help='Description of the argument')
-args=parser.parse_args()
+<span class="c1"># Get command line arguments and store them in args</span>
+<span class="n">parser</span><span class="o">=</span><span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--argument_name&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Description of the argument&#39;</span><span class="p">)</span>
+<span class="n">args</span><span class="o">=</span><span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
 
-# Call the argument
-arg1 = args.argument_name
-
-</code></pre>
+<span class="c1"># Call the argument</span>
+<span class="n">arg1</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">argument_name</span>
+</code></pre></div>
 <p>In R we recommend to use the <a href="https://cran.r-project.org/web/packages/optparse/index.html">optparse</a> package:</p>
-<pre><code class="language-r"># Load package
-library(optparse)
+<div class="highlight"><pre><span></span><code><span class="c1"># Load package</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">optparse</span><span class="p">)</span>
 
-# Get list with command line arguments by name
-option_list = list(
-    make_option(c(&quot;--argument_name&quot;), type=&quot;character&quot;, default=NULL, 
-              help=&quot;Description of the argument&quot;, metavar=&quot;character&quot;)
-); 
+<span class="c1"># Get list with command line arguments by name</span>
+<span class="n">option_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span>
+<span class="w">    </span><span class="nf">make_option</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;--argument_name&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s">&quot;character&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">default</span><span class="o">=</span><span class="kc">NULL</span><span class="p">,</span><span class="w"> </span>
+<span class="w">              </span><span class="n">help</span><span class="o">=</span><span class="s">&quot;Description of the argument&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">metavar</span><span class="o">=</span><span class="s">&quot;character&quot;</span><span class="p">)</span>
+<span class="p">);</span><span class="w"> </span>
 
-opt_parser = OptionParser(option_list=option_list);
-opt = parse_args(opt_parser);
+<span class="n">opt_parser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">OptionParser</span><span class="p">(</span><span class="n">option_list</span><span class="o">=</span><span class="n">option_list</span><span class="p">);</span>
+<span class="n">opt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">parse_args</span><span class="p">(</span><span class="n">opt_parser</span><span class="p">);</span>
 
-# An useful error if the argument is missing
-if (is.null(opt$argument_name)){
-  print_help(opt_parser)
-  stop(&quot;Argument_name needs to be specified, but is missing.n&quot;, call.=FALSE)
-}
+<span class="c1"># An useful error if the argument is missing</span>
+<span class="nf">if </span><span class="p">(</span><span class="nf">is.null</span><span class="p">(</span><span class="n">opt</span><span class="o">$</span><span class="n">argument_name</span><span class="p">)){</span>
+<span class="w">  </span><span class="nf">print_help</span><span class="p">(</span><span class="n">opt_parser</span><span class="p">)</span>
+<span class="w">  </span><span class="nf">stop</span><span class="p">(</span><span class="s">&quot;Argument_name needs to be specified, but is missing.n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">call.</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
+<span class="p">}</span>
 
-# Call the argument
-arg1 &lt;- opt$argument_name
-</code></pre>
+<span class="c1"># Call the argument</span>
+<span class="n">arg1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">opt</span><span class="o">$</span><span class="n">argument_name</span>
+</code></pre></div>
 <h2 id="5-the-generate_metric_infopy-file">5. The generate_metric_info.py file</h2>
 <p>This file could also be written in R or any other language. It should return a json file with the below fields with the metrics information.</p>
-<pre><code class="language-python">import argparse
-import json
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">json</span>
 
-parser=argparse.ArgumentParser()
-parser.add_argument('--metric_info', help='Path to the metric info json file')
-args=parser.parse_args()
+<span class="n">parser</span><span class="o">=</span><span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--metric_info&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Path to the metric info json file&#39;</span><span class="p">)</span>
+<span class="n">args</span><span class="o">=</span><span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
 
-metric_info = {
-    'flip': False,
-    'max': 1,
-    'min': 0,
-    'group': &quot;METRIC_GROUP&quot;,
-    'name': &quot;metric_name&quot;,
-    'input': &quot;metric_input_type&quot;
-}
+<span class="n">metric_info</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;flip&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s1">&#39;min&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s1">&#39;group&#39;</span><span class="p">:</span> <span class="s2">&quot;METRIC_GROUP&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s2">&quot;metric_name&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;input&#39;</span><span class="p">:</span> <span class="s2">&quot;metric_input_type&quot;</span>
+<span class="p">}</span>
 
-with open(args.metric_info, &quot;w&quot;) as fp:
-    json.dump(metric_info , fp, indent=3) 
-</code></pre>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">metric_info</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">metric_info</span> <span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span> 
+</code></pre></div>
 
 
 
