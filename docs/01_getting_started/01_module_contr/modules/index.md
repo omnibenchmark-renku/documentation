@@ -12,9 +12,3 @@ This structure is universal all modules can be build upon it.
 In the following we describe example setups for different benchmark stages (dataset modules, methods modules, metrics modules). 
 Depending on the benchmark these can be flexibly extended and adapted to the benchmark structure.
 
-.. toctree::
-   :glob:
-   :maxdepth: 1
-   :includehidden:
-
-   modules/*

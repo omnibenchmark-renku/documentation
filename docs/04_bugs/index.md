@@ -1,6 +1,5 @@
 
-## Common bugs
+## Common issues
 
-List of common bugs and their solution. 
+List of common issues and their solutions. 
 
-Put also contribution section. 
