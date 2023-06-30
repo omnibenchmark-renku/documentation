@@ -1,6 +1,5 @@
 # Project setup
 
-(section-start-project)=
 
 ## Start a renku project
 
@@ -14,9 +13,11 @@ Each module of omnibenchmark is an independent renku project. It can be setup as
 Having independent modules also means that you can test your code and work on your project without being included into an existing benchmark. Only when a project is included into an omnibenchmark orchestrator it becomes part of the benchmark itself (explained latter Omnibenchmark modules) .
 
 To start a new renku project login at the [renku](https://renkulab.io) with your GitHub account, OrchID or SWITCH-eduID or register a renku account.
-:::info
-**Start a new renku project**: [renkulab.io](https://renkulab.io) -> projects -> + New project
-:::
+
+!!! info
+
+    **Start a new renku project**: [renkulab.io](https://renkulab.io) -> projects -> + New project
+
 Select a name, namespace, description and suitable template and create a new project. There are no specific requirements for omnibenchmark at this stage.
 > Read more about renku projects [here](https://renku.readthedocs.io/en/latest/index.html).
 
@@ -27,10 +28,9 @@ To run omnibenchmark you need the python modules [renku-python](https://pypi.org
 Depending on what template you chose a renku *base image* will be selected at the top. Make sure this base image is reasonable for your module (e.g. choose one with R installed if your module calls R code).
 Extra *linux (ubuntu) software requirements* can be specified within the **`Dockerfile`**, while *python modules* are typically defined in the **`requirements.txt`** file or using conda’s environment management system in the **`environment.yaml`** file and installation of R packages is specified in the **`install.R`** file. Detailed instruction can be found [here](https://renku.readthedocs.io/en/latest/how-to-guides/general/install-packages.html#). The automatically generated **`Dockerfile`** already contains commands to install [renku-python](https://pypi.org/project/renku/) at the bottom, but you need to specify [omnibenchmark](https://pypi.org/project/omnibenchmark/) with the version you want to use as software requirement:
 
-:::info
-**Add this line to requirements.txt**:
-omnibenchmark==VERSION
-:::
+!!! info
+    **Add this line to requirements.txt**:
+    omnibenchmark==VERSION
 
 If you want to call  R code and you chose a R template when creating the renku project the **`install.R`** file is automatically generated upon project creation. Otherwise make sure you switch to a `base image` with R installed and add the **`install.R`** file manually, as well as the following lines to your **`Dockerfile`**:
 

@@ -1,5 +1,12 @@
 site_name: Omnibenchmark
 site_url: https://example.com/
+repo_url: https://github.com/omnibenchmark/documentation
+repo_name: omnibenchmark/documentation
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  
 nav:
     - Motivation: 01_landing.md
     - Getting started:  
@@ -44,8 +51,11 @@ nav:
         - Generate workflow: 03_howto/03_generate_workflow.md
         - Update object: 03_howto/04_update_object.md
         - Filter: 03_howto/05_filter.md
-    - Common bugs: 
+    - Common issues: 
         - 04_bugs/index.md
+        - Templates project creation: 04_bugs/01_templates.md
+        - Python CLI: 04_bugs/02_python.md
+        - Renku interface: 04_bugs/03_renku_interface.md
     - About: about.md
 
 theme:

@@ -5,10 +5,10 @@ Any part of Omnibenchmark can be extended with an additional project that will a
 
 To ease the addition of a new project to Omnibenchmark, you can select a **template** when creating a new Renku project. 
 
-.. note::
+!!! note
+
     Omnibenchmark is built upon the Renku system but the templates are made in a way that you won't have to worry about the underlying Renku mechanisms! You will just have to add your data and/or your code to project that will extend Omnibenchmark. 
 
-.. _section-template:
 
 Using templates on Renku
 -------------------------

@@ -1,4 +1,3 @@
-(section-config)=
 
 # The config.yaml file
 

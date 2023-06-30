@@ -69,10 +69,9 @@ This is the script to load the dataset and to convert its files into the expecte
 Omnibenchmark accepts any kind of script and its maintenance and content is up to the module author.
 Omnibenchmark calls this script from the command line. If you use another language than R, Python, Julia or bash, specify the interpreter to use in the corresponding field of the {ref}`config.yaml file <section-config>` file.
 
-:::note
-All input and output files and if applicable parameter need to be parsed from the command line in the format:
-`--ARGUMENT_NAME ARGUMENT_VALUE`
-:::
+!!!note
+    All input and output files and if applicable parameter need to be parsed from the command line in the format:
+    `--ARGUMENT_NAME ARGUMENT_VALUE`
 
 In Python [argparse](https://pypi.org/project/argparse/) can be used to parse command arguments like this:
 
