@@ -47,3 +47,31 @@ Solution: remove the problematic files from your `data` folder and run again you
 Explanation: you are using an older version of `omniValidator`. 
 
 Solution: upgrade `omniValidator` to > 0.0.19
+
+
+---
+
+### - `InterpreterError: Interpreter could not be identified from extention . Please specify command explicitly.`
+
+Context: error when calling `get_omni_object_from_yaml('src/config.yaml')`
+
+Explanation: your main script likely lacks a complete name (e.g. `.R`, `.py`).
+
+Solution: give an explicit name to your script (e.g. `run_method.R`) and to your `config.yaml` file (`script:` field). 
+
+
+---
+
+### - One or several of my data files are only 3 lines long but the initial content is not here
+
+Context: one or several of your data files contain a structure of type: 
+
+```
+version https://git-lfs.github.com/spec/v1
+oid sha256:XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+size XXXX
+```
+
+Explanation: one or several of your data files have been stored on Git LFS. By default, all large files are pushed there to save memory. More information on the [renku documentation](https://renku.readthedocs.io/en/0.12.4/topic-guides/data.html).
+
+Solution: on an interactive session, check the `fetch automatically LFS data` option. In a terminal, you can also fetch the data with `git lfs pull`. 
