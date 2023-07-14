@@ -1272,6 +1272,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#-interpretererror-interpreter-could-not-be-identified-from-extention-please-specify-command-explicitly" class="md-nav__link">
+    - InterpreterError: Interpreter could not be identified from extention . Please specify command explicitly.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-one-or-several-of-my-data-files-are-only-3-lines-long-but-the-initial-content-is-not-here" class="md-nav__link">
+    - One or several of my data files are only 3 lines long but the initial content is not here
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1361,6 +1375,20 @@
 <h3 id="-filenotfounderror-errno-2-no-such-file-or-directory-optcondalibpython39site-packagesomnivalidatorschemas">- <code>FileNotFoundError: [Errno 2] No such file or directory: '/opt/conda/lib/python3.9/site-packages/omniValidator/schemas/...'</code></h3>
 <p>Explanation: you are using an older version of <code>omniValidator</code>. </p>
 <p>Solution: upgrade <code>omniValidator</code> to &gt; 0.0.19</p>
+<hr />
+<h3 id="-interpretererror-interpreter-could-not-be-identified-from-extention-please-specify-command-explicitly">- <code>InterpreterError: Interpreter could not be identified from extention . Please specify command explicitly.</code></h3>
+<p>Context: error when calling <code>get_omni_object_from_yaml('src/config.yaml')</code></p>
+<p>Explanation: your main script likely lacks a complete name (e.g. <code>.R</code>, <code>.py</code>).</p>
+<p>Solution: give an explicit name to your script (e.g. <code>run_method.R</code>) and to your <code>config.yaml</code> file (<code>script:</code> field). </p>
+<hr />
+<h3 id="-one-or-several-of-my-data-files-are-only-3-lines-long-but-the-initial-content-is-not-here">- One or several of my data files are only 3 lines long but the initial content is not here</h3>
+<p>Context: one or several of your data files contain a structure of type: </p>
+<div class="highlight"><pre><span></span><code>version https://git-lfs.github.com/spec/v1
+oid sha256:XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+size XXXX
+</code></pre></div>
+<p>Explanation: one or several of your data files have been stored on Git LFS. By default, all large files are pushed there to save memory. More information on the <a href="https://renku.readthedocs.io/en/0.12.4/topic-guides/data.html">renku documentation</a>.</p>
+<p>Solution: on an interactive session, check the <code>fetch automatically LFS data</code> option. In a terminal, you can also fetch the data with <code>git lfs pull</code>. </p>
 
 
 
