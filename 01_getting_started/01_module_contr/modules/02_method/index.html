@@ -17,7 +17,7 @@
         <link rel="next" href="../03_metric/">
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.8">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ded33207.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
       
       
 
@@ -1328,56 +1328,56 @@
 <p>A method module imports all datasets of a benchmark or all preprocessed inputs and runs one benchmarking method on them. Method outputs are added to a <a href="https://renku.readthedocs.io/en/latest/topic-guides/data.html#">renku dataset</a>, that can be imported by metric projects to evaluate them. Benchmark specific requirements like file formats, types and prefixes can be checked at the <a href="https://omnibenchmark.pages.uzh.ch/omni_dash/index.html">omnibenchmark webside</a>. To exlore a methods parameter space a parameter dataset is imported. Valid parameter can be specified in the <code>config.yaml file &lt;section-config&gt;</code> or specific {ref}<code>filter &lt;section-filter&gt;</code> files. There are {ref}<code>filter &lt;section-filter&gt;</code> at different level, e.g. parameter limits, specific values and parameter and input file combinations. Usually a method module contains only one workflow, that is automatically run with all valid parameter and input file combinations. Most modules contain 3 main files:</p>
 <h2 id="1-the-configyaml-file">1. The config.yaml file</h2>
 <p>All information about the module are specified in the {ref}<code>config.yaml file &lt;section-config&gt;</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="nn">---</span>
-<span class="nt">data</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;method</span><span class="nv"> </span><span class="s">name&quot;</span>
-<span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;method</span><span class="nv"> </span><span class="s">title&quot;</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Short</span><span class="nv"> </span><span class="s">description</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">method&quot;</span>
-<span class="w">    </span><span class="nt">keywords</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;MODULE_KEY&quot;</span><span class="p p-Indicator">]</span>
-<span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;path/to/module_script&quot;</span>
-<span class="nt">benchmark_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;OMNIBENCHMARK_TYPE&quot;</span>
-<span class="nt">inputs</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">keywords</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;INPUT_KEY1&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;INPUT_KEY2&quot;</span><span class="p p-Indicator">]</span>
-<span class="w">    </span><span class="nt">files</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;input_file_name1&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;input_file_name2&quot;</span><span class="p p-Indicator">]</span>
-<span class="w">    </span><span class="nt">prefix</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">input_file_name1</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;_INPUT1_&quot;</span>
-<span class="w">        </span><span class="nt">input_file_name2</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;_INPUT2_&quot;</span>
-<span class="nt">outputs</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">files</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">method_result1</span><span class="p">:</span><span class="w"> </span>
-<span class="w">            </span><span class="nt">end</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;FILE1_END&quot;</span>
-<span class="w">        </span><span class="nt">method_result2</span><span class="p">:</span>
-<span class="w">            </span><span class="nt">end</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;FILE2_END&quot;</span>
-<span class="nt">parameter</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">names</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;parameter1&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;parameter2&quot;</span><span class="p p-Indicator">]</span>
-<span class="w">    </span><span class="nt">keywords</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;PARAMETER_KEY&quot;</span><span class="p p-Indicator">]</span>
-</code></pre></div>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nn">---</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">data</span><span class="p">:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;method</span><span class="nv"> </span><span class="s">name&quot;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;method</span><span class="nv"> </span><span class="s">title&quot;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Short</span><span class="nv"> </span><span class="s">description</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">method&quot;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">keywords</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;MODULE_KEY&quot;</span><span class="p p-Indicator">]</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;path/to/module_script&quot;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nt">benchmark_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;OMNIBENCHMARK_TYPE&quot;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nt">inputs</span><span class="p">:</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="nt">keywords</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;INPUT_KEY1&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;INPUT_KEY2&quot;</span><span class="p p-Indicator">]</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="nt">files</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;input_file_name1&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;input_file_name2&quot;</span><span class="p p-Indicator">]</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="nt">prefix</span><span class="p">:</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="nt">input_file_name1</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;_INPUT1_&quot;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="nt">input_file_name2</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;_INPUT2_&quot;</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="nt">outputs</span><span class="p">:</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="nt">files</span><span class="p">:</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">        </span><span class="nt">method_result1</span><span class="p">:</span><span class="w"> </span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">            </span><span class="nt">end</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;FILE1_END&quot;</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">        </span><span class="nt">method_result2</span><span class="p">:</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">            </span><span class="nt">end</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;FILE2_END&quot;</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="nt">parameter</span><span class="p">:</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="nt">names</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;parameter1&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;parameter2&quot;</span><span class="p p-Indicator">]</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="nt">keywords</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;PARAMETER_KEY&quot;</span><span class="p p-Indicator">]</span>
+</span></code></pre></div>
 <p>Entries in capital letters depend on the specifications at the <a href="https://omnibenchmark.pages.uzh.ch/omni_dash/index.html">omnibenchmark webside</a>.</p>
 <h2 id="2-the-run_workflowpy-file">2. The run_workflow.py file</h2>
 <p>This file is to generate, run and update the modules dataset and workflow. A most basic script to do so looks like this:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Load modules</span>
-<span class="kn">from</span> <span class="nn">omnibenchmark.utils.build_omni_object</span> <span class="kn">import</span> <span class="n">get_omni_object_from_yaml</span>
-<span class="kn">from</span> <span class="nn">omnibenchmark.renku_commands.general</span> <span class="kn">import</span> <span class="n">renku_save</span>
-
-<span class="c1"># Build an OmniObject from the config.yaml file</span>
-<span class="n">omni_obj</span> <span class="o">=</span> <span class="n">get_omni_object_from_yaml</span><span class="p">(</span><span class="s1">&#39;src/config.yaml&#39;</span><span class="p">)</span>
-
-<span class="c1"># Import and update inputs/parameter and update object accordingly </span>
-<span class="n">omni_obj</span><span class="o">.</span><span class="n">update_object</span><span class="p">()</span>
-<span class="n">renku_save</span><span class="p">()</span>
-
-<span class="c1"># Create the output dataset</span>
-<span class="n">omni_obj</span><span class="o">.</span><span class="n">create_dataset</span><span class="p">()</span>
-<span class="n">renku_save</span><span class="p">()</span>
-
-<span class="c1">## Run and update the workflow on all inputs and parameter combinations</span>
-<span class="n">omni_obj</span><span class="o">.</span><span class="n">run_renku</span><span class="p">()</span>
-<span class="n">renku_save</span><span class="p">()</span>
-
-<span class="c1">## Add files to output dataset</span>
-<span class="n">omni_obj</span><span class="o">.</span><span class="n">update_result_dataset</span><span class="p">()</span>
-<span class="n">renku_save</span><span class="p">()</span>
-</code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Load modules</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">omnibenchmark.utils.build_omni_object</span> <span class="kn">import</span> <span class="n">get_omni_object_from_yaml</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span> <span class="nn">omnibenchmark.renku_commands.general</span> <span class="kn">import</span> <span class="n">renku_save</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># Build an OmniObject from the config.yaml file</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">omni_obj</span> <span class="o">=</span> <span class="n">get_omni_object_from_yaml</span><span class="p">(</span><span class="s1">&#39;src/config.yaml&#39;</span><span class="p">)</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="c1"># Import and update inputs/parameter and update object accordingly </span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="n">omni_obj</span><span class="o">.</span><span class="n">update_object</span><span class="p">()</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">renku_save</span><span class="p">()</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c1"># Create the output dataset</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">omni_obj</span><span class="o">.</span><span class="n">create_dataset</span><span class="p">()</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">renku_save</span><span class="p">()</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="c1">## Run and update the workflow on all inputs and parameter combinations</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="n">omni_obj</span><span class="o">.</span><span class="n">run_renku</span><span class="p">()</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="n">renku_save</span><span class="p">()</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="c1">## Add files to output dataset</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="n">omni_obj</span><span class="o">.</span><span class="n">update_result_dataset</span><span class="p">()</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="n">renku_save</span><span class="p">()</span>
+</span></code></pre></div>
 <h2 id="3-the-module-script">3. The module script</h2>
 <p>This is the script to load the dataset and to convert its files into the expected format.
 Omnibenchmark accepts any kind of script and its maintenance and content is up to the module author.
@@ -1388,39 +1388,39 @@ Omnibenchmark calls this script from the command line. If you use another langua
 <code>--ARGUMENT_NAME ARGUMENT_VALUE</code></p>
 </div>
 <p>In Python <a href="https://pypi.org/project/argparse/">argparse</a> can be used to parse command arguments like this:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Load module</span>
-<span class="kn">import</span> <span class="nn">argparse</span>
-
-<span class="c1"># Get command line arguments and store them in args</span>
-<span class="n">parser</span><span class="o">=</span><span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
-<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--argument_name&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Description of the argument&#39;</span><span class="p">)</span>
-<span class="n">args</span><span class="o">=</span><span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
-
-<span class="c1"># Call the argument</span>
-<span class="n">arg1</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">argument_name</span>
-</code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Load module</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">import</span> <span class="nn">argparse</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Get command line arguments and store them in args</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">parser</span><span class="o">=</span><span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--argument_name&#39;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s1">&#39;Description of the argument&#39;</span><span class="p">)</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">args</span><span class="o">=</span><span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1"># Call the argument</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">arg1</span> <span class="o">=</span> <span class="n">args</span><span class="o">.</span><span class="n">argument_name</span>
+</span></code></pre></div>
 <p>In R we recommend to use the <a href="https://cran.r-project.org/web/packages/optparse/index.html">optparse</a> package:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Load package</span>
-<span class="nf">library</span><span class="p">(</span><span class="n">optparse</span><span class="p">)</span>
-
-<span class="c1"># Get list with command line arguments by name</span>
-<span class="n">option_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span>
-<span class="w">    </span><span class="nf">make_option</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;--argument_name&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s">&quot;character&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">default</span><span class="o">=</span><span class="kc">NULL</span><span class="p">,</span><span class="w"> </span>
-<span class="w">              </span><span class="n">help</span><span class="o">=</span><span class="s">&quot;Description of the argument&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">metavar</span><span class="o">=</span><span class="s">&quot;character&quot;</span><span class="p">)</span>
-<span class="p">);</span><span class="w"> </span>
-
-<span class="n">opt_parser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">OptionParser</span><span class="p">(</span><span class="n">option_list</span><span class="o">=</span><span class="n">option_list</span><span class="p">);</span>
-<span class="n">opt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">parse_args</span><span class="p">(</span><span class="n">opt_parser</span><span class="p">);</span>
-
-<span class="c1"># An useful error if the argument is missing</span>
-<span class="nf">if </span><span class="p">(</span><span class="nf">is.null</span><span class="p">(</span><span class="n">opt</span><span class="o">$</span><span class="n">argument_name</span><span class="p">)){</span>
-<span class="w">  </span><span class="nf">print_help</span><span class="p">(</span><span class="n">opt_parser</span><span class="p">)</span>
-<span class="w">  </span><span class="nf">stop</span><span class="p">(</span><span class="s">&quot;Argument_name needs to be specified, but is missing.n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">call.</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
-<span class="p">}</span>
-
-<span class="c1"># Call the argument</span>
-<span class="n">arg1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">opt</span><span class="o">$</span><span class="n">argument_name</span>
-</code></pre></div>
+<div class="language-r highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Load package</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nf">library</span><span class="p">(</span><span class="n">optparse</span><span class="p">)</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># Get list with command line arguments by name</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">option_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="nf">make_option</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;--argument_name&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">type</span><span class="o">=</span><span class="s">&quot;character&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">default</span><span class="o">=</span><span class="kc">NULL</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">              </span><span class="n">help</span><span class="o">=</span><span class="s">&quot;Description of the argument&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">metavar</span><span class="o">=</span><span class="s">&quot;character&quot;</span><span class="p">)</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">);</span><span class="w"> </span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">opt_parser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">OptionParser</span><span class="p">(</span><span class="n">option_list</span><span class="o">=</span><span class="n">option_list</span><span class="p">);</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="n">opt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">parse_args</span><span class="p">(</span><span class="n">opt_parser</span><span class="p">);</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="c1"># An useful error if the argument is missing</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="nf">if </span><span class="p">(</span><span class="nf">is.null</span><span class="p">(</span><span class="n">opt</span><span class="o">$</span><span class="n">argument_name</span><span class="p">)){</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">  </span><span class="nf">print_help</span><span class="p">(</span><span class="n">opt_parser</span><span class="p">)</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">  </span><span class="nf">stop</span><span class="p">(</span><span class="s">&quot;Argument_name needs to be specified, but is missing.n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">call.</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="p">}</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="c1"># Call the argument</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="n">arg1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">opt</span><span class="o">$</span><span class="n">argument_name</span>
+</span></code></pre></div>
 
 
 
@@ -1458,10 +1458,10 @@ Omnibenchmark calls this script from the command line. If you use another langua
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.indexes", "navigation.tabs", "toc.integrate"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.indexes", "navigation.tabs", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.51198bba.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
   </body>
