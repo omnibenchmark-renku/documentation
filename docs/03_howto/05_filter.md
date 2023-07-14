@@ -1,5 +1,5 @@
 
-# Filter (out) Inputs and Parameter
+# Filter Inputs and Parameter to be excluded
 
 Some methods are not applicable for all input datasets or the entire parameter range. Maybe the parameter range to use depends on features of the input dataset. `omnibenchmark` allows filtering (filter out) at different level to flexibly specify input data bundles to exclude, parameter limits and input-parameter combinations to ignore. See below for different types of filter with examples.
 
