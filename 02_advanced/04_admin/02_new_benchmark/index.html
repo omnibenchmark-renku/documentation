@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#start-a-new-omnibenchmark-using-renkulabio-and-robinsonlab-architecture" class="md-skip">
+        <a href="#foreground" class="md-skip">
           Skip to content
         </a>
       
@@ -1109,19 +1109,12 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#start-a-new-omnibenchmark-using-renkulabio-and-robinsonlab-architecture" class="md-nav__link">
-    Start a new omnibenchmark using renkulab.io and robinsonlab architecture
+  <a href="#foreground" class="md-nav__link">
+    Foreground
   </a>
   
-    <nav class="md-nav" aria-label="Start a new omnibenchmark using renkulab.io and robinsonlab architecture">
+    <nav class="md-nav" aria-label="Foreground">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#users" class="md-nav__link">
-    Users
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#gitlab-group-and-subgroups" class="md-nav__link">
@@ -1131,29 +1124,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#secrets" class="md-nav__link">
-    Secrets
+  <a href="#benchmark-masked-variablestokens" class="md-nav__link">
+    Benchmark masked variables/tokens
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#variables" class="md-nav__link">
-    Variables
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#keys" class="md-nav__link">
-    Keys
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#runners" class="md-nav__link">
-    Runners
+  <a href="#user-tokens" class="md-nav__link">
+    User tokens
   </a>
   
 </li>
@@ -1166,8 +1145,42 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#optional-terraformomnibenchmarkize-via-gitlab-api" class="md-nav__link">
-    Optional: terraform/omnibenchmarkize via gitlab API
+  <a href="#terraforming-via-templates" class="md-nav__link">
+    Terraforming via templates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terraforming-via-gitlab-api" class="md-nav__link">
+    Terraforming via gitlab API
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipsresources" class="md-nav__link">
+    Tips/resources
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    Background
+  </a>
+  
+    <nav class="md-nav" aria-label="Background">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#runners" class="md-nav__link">
+    Runners
   </a>
   
 </li>
@@ -1530,16 +1543,101 @@
 
   <h1>Start a new benchmark</h1>
 
-<h3 id="start-a-new-omnibenchmark-using-renkulabio-and-robinsonlab-architecture">Start a new omnibenchmark using renkulab.io and robinsonlab architecture</h3>
 <p>This guide relies on the <code>default</code> omnibenchmark components (gitlab runners, triplestore etc).</p>
-<h4 id="users">Users</h4>
-<h4 id="gitlab-group-and-subgroups">Gitlab group (and subgroups)</h4>
-<h4 id="secrets">Secrets</h4>
-<h4 id="variables">Variables</h4>
-<h4 id="keys">Keys</h4>
-<h4 id="runners">Runners</h4>
-<h4 id="orchestrator">Orchestrator</h4>
-<h4 id="optional-terraformomnibenchmarkize-via-gitlab-api">Optional: terraform/omnibenchmarkize via gitlab API</h4>
+<p>GUI click/fill instructions have been tested in <a href="https://renkulab.io/gitlab">https://renkulab.io/gitlab</a> running GitLab Community Edition 14.10.5 and might change in future releases.</p>
+<h2 id="foreground">Foreground</h2>
+<p>The starting point for a non automated benchmark creation is <a href="https://renkulab.io">renkulab.io</a>.</p>
+<p>Interestingly, renkulab.io's gitlab is available at <a href="https://renkulab.io/gitlab">renkulab.io/gitlab</a>. If you log in to renkulab.io you'll be logged in to the gitlab too. To switch easily from renku's GUI to gitlab's GUI please notice the <code>projects</code> or <code>gitlab</code> components of these URLs: </p>
+<ul>
+<li><a href="https://renkulab.io/gitlab/omnibenchmark/iris_example/iris-dataset">https://renkulab.io/gitlab/omnibenchmark/iris_example/iris-dataset</a> </li>
+</ul>
+<p>vs</p>
+<ul>
+<li><a href="https://renkulab.io/projects/omnibenchmark/iris_example/iris-dataset">https://renkulab.io/projects/omnibenchmark/iris_example/iris-dataset</a></li>
+</ul>
+<p>Both refer to the same repository.</p>
+<h3 id="gitlab-group-and-subgroups">Gitlab group (and subgroups)</h3>
+<p>Repository groups can be created by browsing https://renkulab.io/gitlab pressing <code>new group</code>. Repository subgroups can be created by browsing a group, i.e.  https://renkulab.io/gitlab/omb_benchmarks , and pressing <code>new subgroup</code>. . If interested in creating a subgroup below 'known' omnibenchmark groups such as https://renkulab.io/gitlab/omb_benchmarks  or https://renkulab.io/gitlab/omnibenchmark your user needs to be granted rights; contact the omnibecnhmark team if so.</p>
+<p><strong>Tip</strong>: you can add other people to your benchmark group/subgroup by pressing (left panel) <code>(sub)group information -&gt; Members</code>.</p>
+<p><strong>Tip</strong>: it's advisable to register a dedicated gitlab runner when generating a group, and use it as a group runner for CI/CD. For that, check <a href="../04_runner">our runner's docs</a>.</p>
+<h3 id="benchmark-masked-variablestokens">Benchmark masked variables/tokens</h3>
+<p>Once you've created the group or subgroup where your benchmark will leave (or at least your orchestrator will), you'll need to create a token with <code>api_read</code> scope. For that, visit your <strong>group</strong> <code>Settings -&gt; CI/CD -&gt; Variables</code> setting and create a nonprotected, masked variable, for instance `OMB_ACCESS_TOKEN~. And keep its content stored somewhere for future usage. </p>
+<h3 id="user-tokens">User tokens</h3>
+<p>A personal gitlab token will allow to automate actions. To generate one:
+- log in at <a href="https://renkulab.io/gitlab">https://renkulab.io/gitlab</a>
+- visit <a href="https://renkulab.io/gitlab/-/profile/personal_access_tokens">https://renkulab.io/gitlab/-/profile/personal_access_tokens</a>
+- create one with the adequate scope (i.e. read API)</p>
+<p>This token won't be used by omnibenchmark, but can be handy to have.</p>
+<h3 id="orchestrator">Orchestrator</h3>
+<p>The core component of omnibenchmark is an orchestrator, which stitches together datasets, methods and metrics. Without an orchestrator there is no benchmark. Still, you can set up the orchestrator last.</p>
+<p>Orchestrators are unusual omnibenchmark components. They're mainly a gitlab CI/CD yaml. An <a href="https://renkulab.io/gitlab/omnibenchmark/iris_example/iris-orchestrator/-/blob/master/.gitlab-ci.yml">example orchestrator</a> looks like this:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>variables:
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  GIT_STRATEGY: fetch
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  GIT_SSL_NO_VERIFY: &quot;true&quot;
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  GIT_LFS_SKIP_SMUDGE: 1
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  OMNIBENCHMARK_NAME: iris_example
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  TRIPLESTORE_URL: http://imlspenticton.uzh.ch/omni_iris_data
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  CI_UPSTREAM_PROJECT: ${CI_PROJECT_PATH}
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  OMNI_UPDATE_TOKEN: ${OMNI_UPDATE_TOKEN}
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  CI_PUSH_TOKEN: ${CI_PUSH_TOKEN}
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>stages:
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>  - build
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  - data_run
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>  - process_run
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>  - parameter_run
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>  - method_run
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>  - metric_run
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>  - summary_metric_run
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>image_build:
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>  stage: build
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>  image: docker:stable
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>  rules: 
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    - if: &#39;$CI_PIPELINE_SOURCE == &quot;pipeline&quot;&#39;
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>      when: never
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>  before_script:
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN http://$CI_REGISTRY
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>  script: |
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>    CI_COMMIT_SHA_7=$(echo $CI_COMMIT_SHA | cut -c1-7)
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>    docker build --tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA_7 .
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>    docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA_7
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>trigger_iris_dataset:
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>  stage: data_run 
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>  only:
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>    - schedules
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>  trigger: 
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>    project: omnibenchmark/iris_example/iris-dataset
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>    strategy: depend
+</span></code></pre></div>
+<p>The first stanza (<code>variables</code>) defines variables needed for overall git behaviour as well as helping with authentication. The important tokens are:</p>
+<ul>
+<li>OMNI_UPDATE_TOKEN</li>
+<li>CI_PUSH_TOKEN</li>
+</ul>
+<p>The second stanza (<code>image_build</code>) generates a renku-powered docker image (i.e. for interactive sessions).</p>
+<p>The third stanza (<code>trigger_iris_dataset</code>) is how most of the orchestrator CI/CD tasks look like: they trigger downstream projects CI/CDs; that is, their <code>gitlab-ci.yaml</code>. In the example above, triggers <a href="https://renkulab.io/gitlab/omnibenchmark/iris_example/iris-dataset/-/blob/master/.gitlab-ci.yml">the iris dataset CI/CD</a>.</p>
+<h3 id="terraforming-via-templates">Terraforming via templates</h3>
+<p><a href="https://github.com/omnibenchmark/contributed-project-templates">Omnibenchmark's renku templates</a> help to create new benchmark components.</p>
+<h3 id="terraforming-via-gitlab-api">Terraforming via gitlab API</h3>
+<p><a href="https://github.com/omnibenchmark/omnibus">omnibus</a> helps automating benchmark creation.</p>
+<h3 id="tipsresources">Tips/resources</h3>
+<ul>
+<li><a href="https://docs.gitlab.com/ee/ci/variables/predefined_variables.html">Predefined CI/CD variables</a></li>
+</ul>
+<h2 id="background">Background</h2>
+<p>Infrastructure-wise, some manual actions need to be done to start a new benchmark.</p>
+<ul>
+<li>register runner(s)</li>
+<li>set up bettr endpoint</li>
+<li>add a triplestore dataset</li>
+<li>add a triplestore apache reverse proxy</li>
+</ul>
+<h3 id="runners">Runners</h3>
+<p>It's advisable to register a dedicated gitlab runner when generating a benchmark, and use it as a group runner for CI/CD. For that, check <a href="../04_runner">our runner's docs</a></p>
 
 
 
