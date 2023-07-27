@@ -1433,41 +1433,43 @@
 
 <h2 id="administering-omnibenchmark">Administering omnibenchmark</h2>
 <h3 id="components">Components</h3>
-<p>Omnibenchmark is designed as a SaaS. Omnibenchmark's components are modular, and some you can deploy in your own to have extra control. omnibenchmark.org already runs all these components, so you can make use of the <code>default</code> components and perhaps skip this guide.</p>
+<p>Omnibenchmark is designed as a SaaS. Omnibenchmark's components are modular, and some you can deploy in your own to have extra control. <a href="omnibenchmark.org">omnibenchmark.org</a> already provides all these components, so this guide only matters if you'd like to replace some of the <code>default</code> components.</p>
 <ul>
 <li>renkulab and gitlab deployment<ul>
-<li><code>default</code>: renkulab and gitlab deployment from <a href="https://renkulab.io">renkulab.io</a></li>
-<li><code>self</code>: k8s and following <a href="https://renku.readthedocs.io/en/stable/how-to-guides/admin/index.html">renku's admin docs</a></li>
+<li><code>default</code>: renkulab and gitlab deployment from <a href="https://renkulab.io">renkulab.io</a>.</li>
+<li><code>self</code>: k8s and following <a href="https://renku.readthedocs.io/en/stable/how-to-guides/admin/index.html">renku's admin docs</a>.</li>
 </ul>
 </li>
 <li>gitlab runners <ul>
-<li><code>default</code>: provided by renkulab.io</li>
-<li><code>self</code>: registered runners in any architecture (laptops, HPC, GPU-powered machines etc)</li>
+<li><code>default</code>: provided by renkulab.io.</li>
+<li><code>self</code>: registered runners in any architecture (laptops, HPC, GPU-powered machines etc).</li>
 </ul>
 </li>
 <li>omnibenchmark triplestore<ul>
-<li><code>default</code>: apache jena from robinsonlab (ask us for details)</li>
-<li><code>self</code>: deploy a jena/fuseki to have full control on your data(sets)</li>
+<li><code>default</code>: apache jena from robinsonlab (ask us for details).</li>
+<li><code>self</code>: deploy a jena/fuseki to have full control on your data(sets).</li>
 </ul>
 </li>
-<li>centralized benchmark listing/json<ul>
+<li>centralized benchmark listing/json.<ul>
 <li><code>default</code>: robinsonlab (ask us for details, queried by <a href="https://github.com/omnibenchmark/omnibenchmark-py/blob/35e468cb48b814e15deb31498b35d13566f5573d/omnibenchmark/utils/local_cache/sync.py#L21">omb-py</a>)</li>
 </ul>
 </li>
 <li>bettr deployment <ul>
-<li><code>default</code>: shiny-server by robinsonlab (ask us for details)</li>
-<li><code>self</code>: set up a shiny-server (perhaps using singularity)</li>
+<li><code>default</code>: shiny-server by robinsonlab (ask us for details).</li>
+<li><code>self</code>: set up a shiny-server (perhaps using singularity).</li>
 </ul>
 </li>
 <li>Web dashboard<ul>
-<li><code>default</code>: [omnibenchmark.org]{omnibenchmark.org} from robinsonlab (ask us for details, <a href="https://renkulab.io/gitlab/omnibenchmark/omni_site">code</a>)</li>
+<li><code>default</code>: <a href="omnibenchmark.org">omnibenchmark.org</a> from robinsonlab (ask us for details, <a href="https://renkulab.io/gitlab/omnibenchmark/omni_site">code</a>)</li>
 </ul>
 </li>
 </ul>
 <p>Besides, omnibenchmark relies on a set of python modules and R packages, which also need to be cross-compatible and compatible with your renkulab deployment, including:</p>
 <ul>
-<li><a href="https://pypi.org/project/omnibenchmark/">omnibenchmark python</a></li>
+<li><a href="https://pypi.org/project/omnibenchmark/">omnibenchmark python</a><ul>
 <li>tip: needs to be compatible with <a href="https://pypi.org/project/renku/">renku python</a></li>
+</ul>
+</li>
 <li><a href="https://github.com/omnibenchmark/omniValidator">omni validator</a></li>
 <li><a href="https://renkulab.io/gitlab/btraven/omni-cli">omni_cli</a></li>
 <li><a href="https://github.com/federicomarini/bettr">bettr</a></li>
@@ -1475,15 +1477,15 @@
 <h2 id="configuration-guides">Configuration guides</h2>
 <ol>
 <li><a href="01_services">Services overview</a> </li>
-<li><a href="02_new_benchmark">Start a new benchmark</a></li>
-<li><a href="03_triplestore">Set up a triplestore</a></li>
-<li><a href="04_runner/">Register a runner</a></li>
-<li><a href="05_bettr/">Serve bettr</a></li>
-<li><a href="06_dashboard/">Serve a dashboard</a></li>
-<li><a href="07_renkulab/">Deploy renkulab</a></li>
+<li><a href="02_new_benchmark">Start a new benchmark</a> (docs not available yet)</li>
+<li><a href="03_triplestore">Set up a triplestore</a> (docs not available yet)</li>
+<li><a href="04_runner/">Register a runner</a> </li>
+<li><a href="05_bettr/">Serve bettr</a> (docs not available yet)</li>
+<li><a href="06_dashboard/">Serve a dashboard</a> (docs not available yet)</li>
+<li><a href="07_renkulab/">Deploy renkulab</a> (docs not available yet)</li>
 </ol>
 <h2 id="contact">Contact</h2>
-<p>mark.robinson@uzh.ch</p>
+<p>To get tokens/authentication details: mark.robinson@uzh.ch, izaskun.mallona@uzh.ch</p>
 
 
 
