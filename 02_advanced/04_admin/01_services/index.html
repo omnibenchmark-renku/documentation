@@ -1101,6 +1101,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    Tips
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1471,31 +1478,29 @@
 <h2 id="services-dependencies">Services dependencies</h2>
 <p>Several components, mainly omnibenchmark python, query other components (APIs, triplestore) on runtime.</p>
 <ul>
-<li>Renku API calls<ul>
+<li>Renku API<ul>
 <li>omnibenchmark python</li>
 </ul>
 </li>
-<li>Gitlab API calls<ul>
+<li>Gitlab API<ul>
 <li>omnibenchmark python</li>
+<li>gitlab runners</li>
 </ul>
 </li>
-<li>Triplestore queries<ul>
-<li>omnibenchmark python</li>
+<li>Triplestore<ul>
+<li>omnibenchmark python (query)</li>
+<li>omnibenchmark python (population)</li>
+<li>anywhere (population, from within the CI/CD job; update token needed)</li>
+<li>(not yet implemented) git/renku hooks</li>
 </ul>
 </li>
-<li>Triplestore population<ul>
-<li>omnibenchmark python</li>
-</ul>
-</li>
-<li>Validation and file format contracts<ul>
-<li>omnivalidator</li>
-</ul>
-</li>
-<li>Gitlab-runners<ul>
-<li>gitlab</li>
+<li>Metric results<ul>
+<li>a cron job from the machine serving bettr deployments </li>
 </ul>
 </li>
 </ul>
+<h2 id="tips">Tips</h2>
+<p>You can run renku projects in <code>renku stealth mode</code> disabling the <code>https://renkulab.io/webhooks/events</code> hook within your gitlab project by browsing <code>Settings -&gt; Webhooks</code>.</p>
 
 
 
