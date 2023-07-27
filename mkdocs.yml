@@ -51,7 +51,15 @@ nav:
             - 02_advanced/02_benchmarker/index.md
         - Method user: 
             - 02_advanced/03_method_user/index.md
-        
+        - Administrator:
+            - 02_advanced/04_admin/index.md
+            - Services overview: 02_advanced/04_admin/01_services.md
+            - Start a new benchmark: 02_advanced/04_admin/02_new_benchmark.md
+            - Set up a triplestore: 02_advanced/04_admin/03_triplestore.md
+            - Register a runner: 02_advanced/04_admin/04_runner.md
+            - Serve bettr: 02_advanced/04_admin/05_bettr.md
+            - Serve the dashboard: 02_advanced/04_admin/06_dashboard.md
+            - Deploy renkulab: 02_advanced/04_admin/07_renkulab.md        
     - How-to guides: 
         - 03_howto/index.md
         - Build object: 03_howto/01_build_object.md
