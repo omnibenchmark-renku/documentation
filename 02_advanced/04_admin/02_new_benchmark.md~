@@ -1,0 +1,19 @@
+### Start a new omnibenchmark using renkulab.io and robinsonlab architecture
+
+This guide assumes all components (gitlab runners, triplestore etc) are already configured and running.
+
+#### Users
+
+#### Gitlab group (and subgroups)
+
+#### Secrets
+
+#### Variables
+
+#### Keys
+
+#### Runners
+
+#### Orchestrator
+
+#### Optional: terraform/omnibenchmarkize via gitlab API
