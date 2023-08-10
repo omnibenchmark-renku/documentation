@@ -10,30 +10,26 @@ To ease the addition of a new project to Omnibenchmark, you can select a **templ
     Omnibenchmark is built upon the Renku system but the templates are made in a way that you won't have to worry about the underlying Renku mechanisms! You will just have to add your data and/or your code to project that will extend Omnibenchmark. 
 
 
-Using templates on Renku
+## Using templates on Renku
 -------------------------
 
-The following steps will show you how to create a new Omnibenchmark project for **any step** (data, method, metric,...).
+The following guide will show you how to create a new Omnibenchmark project for **any module** (data, method, metric,...).
 
-1. On `Renku <https://renkulab.io/>`_ start a new project by clicking the "+" symbol and add a tittle and a description to your project (this will appear under your project title in your list of projects). 
+If your benchmark is in the list below, you can click on the module that you would like to add and jump to **step 11**; 
 
-![image](https://raw.githubusercontent.com/omnibenchmark/documentation/master/docs/images/datatemplate0.png)
+**Batch-correction Omnibenchmark**: 
+    - [Data](https://renkulab.io/projects/new?data=eyJuYW1lc3BhY2UiOiJvbW5pYmVuY2htYXJrL29tbmktYmF0Y2gtcHkiLCJ2aXNpYmlsaXR5IjoicHVibGljIiwidXJsIjoiaHR0cHM6Ly9naXRodWIuY29tL29tbmliZW5jaG1hcmsvY29udHJpYnV0ZWQtcHJvamVjdC10ZW1wbGF0ZXMiLCJyZWYiOiJtYWluIiwidGVtcGxhdGUiOiJDdXN0b20vb21uaS1kYXRhLXB5IiwidmFyaWFibGVzIjp7ImJlbmNobWFya19uYW1lIjoib21uaV9iYXRjaF9weSIsImRhdGFzZXRfa2V5d29yZCI6Im9tbmlfYmF0Y2hfZGF0YSIsIm1ldGFkYXRhX2Rlc2NyaXB0aW9uIjoiIiwicHJvamVjdF90aXRsZSI6IiIsInN0dWR5X2xpbmsiOiIiLCJzdHVkeV9ub3RlIjoiIiwic3R1ZHlfdGlzc3VlIjoiIn19)
+    - [Method](https://renkulab.io/projects/new?data=eyJuYW1lc3BhY2UiOiJvbW5pYmVuY2htYXJrL29tbmktYmF0Y2gtcHkiLCJ2aXNpYmlsaXR5IjoicHVibGljIiwidXJsIjoiaHR0cHM6Ly9naXRodWIuY29tL29tbmliZW5jaG1hcmsvY29udHJpYnV0ZWQtcHJvamVjdC10ZW1wbGF0ZXMiLCJyZWYiOiJtYWluIiwidGVtcGxhdGUiOiJDdXN0b20vb21uaS1tZXRob2QtcHkiLCJ2YXJpYWJsZXMiOnsiYmVuY2htYXJrX25hbWUiOiJvbW5pX2JhdGNoX3B5IiwibWV0aG9kX2tleXdvcmQiOiJvbW5pX2JhdGNoX21ldHJpY19weSIsInByb2plY3RfdGl0bGUiOiIifX0%3D)
+    - [Metric](https://renkulab.io/projects/new?data=eyJuYW1lc3BhY2UiOiJvbW5pYmVuY2htYXJrL29tbmktYmF0Y2gtcHkiLCJ2aXNpYmlsaXR5IjoicHVibGljIiwidXJsIjoiaHR0cHM6Ly9naXRodWIuY29tL29tbmliZW5jaG1hcmsvY29udHJpYnV0ZWQtcHJvamVjdC10ZW1wbGF0ZXMiLCJyZWYiOiJtYWluIiwidGVtcGxhdGUiOiJDdXN0b20vb21uaS1tZXRyaWMtcHkiLCJ2YXJpYWJsZXMiOnsiYmVuY2htYXJrX25hbWUiOiJvbW5pX2JhdGNoX3B5IiwibWV0cmljX2tleXdvcmQiOiJvbW5pX2JhdGNoX21ldHJpY19weSIsInByb2plY3RfdGl0bGUiOiIifX0%3D)
 
-2. On the "New project" page, fill in the required information. Under "Repository URL", indicate https://github.com/omnibenchmark/contributed-project-templates
+**Clustering Omnibenchmark**: 
+    - [Data](https://renkulab.io/projects/new?data=eyJuYW1lc3BhY2UiOiJvbWJfYmVuY2htYXJrcy9vbW5pY2x1c3RlcmluZyIsInZpc2liaWxpdHkiOiJwdWJsaWMiLCJ1cmwiOiJodHRwczovL2dpdGh1Yi5jb20vb21uaWJlbmNobWFyay9jb250cmlidXRlZC1wcm9qZWN0LXRlbXBsYXRlcyIsInJlZiI6Im1haW4iLCJ0ZW1wbGF0ZSI6IkN1c3RvbS9vbW5pLWRhdGEtcHkiLCJ2YXJpYWJsZXMiOnsiYmVuY2htYXJrX25hbWUiOiJvbW5pY2x1c3RlcmluZyIsImRhdGFzZXRfa2V5d29yZCI6ImRhdGFzZXRfb21uaWNsdXN0ZXJpbmciLCJtZXRhZGF0YV9kZXNjcmlwdGlvbiI6IiIsInByb2plY3RfdGl0bGUiOiIiLCJzdHVkeV9saW5rIjoiIiwic3R1ZHlfbm90ZSI6IiIsInN0dWR5X3Rpc3N1ZSI6IiJ9fQ%3D%3D)
+    - [Method](https://renkulab.io/projects/new?data=eyJuYW1lc3BhY2UiOiJvbWJfYmVuY2htYXJrcy9vbW5pY2x1c3RlcmluZyIsInZpc2liaWxpdHkiOiJwdWJsaWMiLCJ1cmwiOiJodHRwczovL2dpdGh1Yi5jb20vb21uaWJlbmNobWFyay9jb250cmlidXRlZC1wcm9qZWN0LXRlbXBsYXRlcyIsInJlZiI6Im1haW4iLCJ0ZW1wbGF0ZSI6IkN1c3RvbS9vbW5pLW1ldGhvZC1weSIsInZhcmlhYmxlcyI6eyJiZW5jaG1hcmtfbmFtZSI6Im9tbmljbHVzdGVyaW5nIiwibWV0aG9kX2tleXdvcmQiOiJtZXRob2Rfb21uaWNsdXN0ZXJpbmciLCJwcm9qZWN0X3RpdGxlIjoiIn19)
+    - [Metric](https://renkulab.io/projects/new?data=eyJuYW1lc3BhY2UiOiJvbWJfYmVuY2htYXJrcy9vbW5pY2x1c3RlcmluZyIsInZpc2liaWxpdHkiOiJwdWJsaWMiLCJ1cmwiOiJodHRwczovL2dpdGh1Yi5jb20vb21uaWJlbmNobWFyay9jb250cmlidXRlZC1wcm9qZWN0LXRlbXBsYXRlcyIsInJlZiI6Im1haW4iLCJ0ZW1wbGF0ZSI6IkN1c3RvbS9vbW5pLW1ldHJpYy1weSIsInZhcmlhYmxlcyI6eyJiZW5jaG1hcmtfbmFtZSI6Im9tbmljbHVzdGVyaW5nIiwibWV0cmljX2tleXdvcmQiOiJtZXRyaWNfb21uaWNsdXN0ZXJpbmciLCJwcm9qZWN0X3RpdGxlIjoiIn19)
 
-3. Under "Repository Reference", indicate "main".
+**Spatial clustering Omnibenchmark**: 
+    - [Data](https://renkulab.io/projects/new?data=eyJuYW1lc3BhY2UiOiJvbWJfYmVuY2htYXJrcy9vbW5pX3NydF9jbHVzdGVyaW5nIiwidmlzaWJpbGl0eSI6InB1YmxpYyIsInVybCI6Imh0dHBzOi8vZ2l0aHViLmNvbS9vbW5pYmVuY2htYXJrL2NvbnRyaWJ1dGVkLXByb2plY3QtdGVtcGxhdGVzIiwicmVmIjoibWFpbiIsInRlbXBsYXRlIjoiQ3VzdG9tL29tbmktZGF0YS1weSIsInZhcmlhYmxlcyI6eyJiZW5jaG1hcmtfbmFtZSI6InNwYXRpYWwtY2x1c3RlcmluZyIsImRhdGFzZXRfa2V5d29yZCI6InNwYXRpYWwtY2x1c3RlcmluZ19kYXRhc2V0IiwibWV0YWRhdGFfZGVzY3JpcHRpb24iOiIiLCJwcm9qZWN0X3RpdGxlIjoiIiwic3R1ZHlfbGluayI6IiIsInN0dWR5X25vdGUiOiIiLCJzdHVkeV90aXNzdWUiOiIifX0%3D)
+    - [Method](https://renkulab.io/projects/new?data=eyJuYW1lc3BhY2UiOiJvbWJfYmVuY2htYXJrcy9vbW5pX3NydF9jbHVzdGVyaW5nIiwidmlzaWJpbGl0eSI6InB1YmxpYyIsInVybCI6Imh0dHBzOi8vZ2l0aHViLmNvbS9vbW5pYmVuY2htYXJrL2NvbnRyaWJ1dGVkLXByb2plY3QtdGVtcGxhdGVzIiwicmVmIjoibWFpbiIsInRlbXBsYXRlIjoiQ3VzdG9tL29tbmktbWV0aG9kLXB5IiwidmFyaWFibGVzIjp7ImJlbmNobWFya19uYW1lIjoic3BhdGlhbC1jbHVzdGVyaW5nIiwibWV0aG9kX2tleXdvcmQiOiJzcGF0aWFsLWNsdXN0ZXJpbmdfbWV0aG9kIiwicHJvamVjdF90aXRsZSI6IiJ9fQ%3D%3D)
+    - [Metric](https://renkulab.io/projects/new?data=eyJuYW1lc3BhY2UiOiJvbWJfYmVuY2htYXJrcy9vbW5pX3NydF9jbHVzdGVyaW5nIiwidmlzaWJpbGl0eSI6InB1YmxpYyIsInVybCI6Imh0dHBzOi8vZ2l0aHViLmNvbS9vbW5pYmVuY2htYXJrL2NvbnRyaWJ1dGVkLXByb2plY3QtdGVtcGxhdGVzIiwicmVmIjoibWFpbiIsInRlbXBsYXRlIjoiQ3VzdG9tL29tbmktbWV0cmljLXB5IiwidmFyaWFibGVzIjp7ImJlbmNobWFya19uYW1lIjoic3BhdGlhbC1jbHVzdGVyaW5nIiwibWV0cmljX2tleXdvcmQiOiJzcGF0aWFsLWNsdXN0ZXJpbmdfbWV0cmljIiwicHJvamVjdF90aXRsZSI6IiJ9fQ%3D%3D)
 
-4. Fetch the templates. 
-
-![image](https://raw.githubusercontent.com/omnibenchmark/documentation/master/docs/images/datatemplate1.png)
-
-5. Once completed, select the desired omnibenchmark template (here as example, the "Basic omnibenchmark dataset" template to add a new dataset) and add all metadata that are required (you will be able to modify them latter if needed).
-
-6. Create your project.
-
-![image](https://raw.githubusercontent.com/omnibenchmark/documentation/master/docs/images/datatemplate2.png)
-
-7. The template will generate a new project will all the required tools for you to extend omnibenchmark. You will find further instructions in the dedicated `Module documentation <https://omnibenchmark.readthedocs.io/en/latest/start/02_omnibenchmark_modules.html>`_ , which will depend on the template that you selected. 
-
-
-
+<iframe src="https://scribehow.com/embed/Create_a_new_Omnibenchmark_project_on_Renku__uNZAG7A1Qnil6XePj6UA6g" width="100%" height="640" allowfullscreen frameborder="0"></iframe>

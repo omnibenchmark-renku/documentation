@@ -1,5 +1,5 @@
 
-## Getting started
+# Getting started
 
 Depending on your role, navigate to the corresponding section 
 
