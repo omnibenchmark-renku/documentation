@@ -8,10 +8,10 @@
       
       
       
-        <link rel="canonical" href="https://example.com/01_getting_started/01_module_contr/modules/">
+        <link rel="canonical" href="https://example.com/01_getting_started/01_module_contr/setup_module/">
       
       
-        <link rel="prev" href="../config_yaml/">
+        <link rel="prev" href="../create_module/">
       
       
         <link rel="next" href="01_data/">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Index - Omnibenchmark</title>
+        <title>2. Set up a module - Omnibenchmark</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#omnibenchmark-modules" class="md-skip">
+        <a href="#2-set-up-a-module" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Index
+              2. Set up a module
             
           </span>
         </div>
@@ -390,10 +390,6 @@
         
           
         
-          
-        
-          
-        
       
       
         
@@ -422,36 +418,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../templates/" class="md-nav__link">
-        Start from templates
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../project_setup/" class="md-nav__link">
-        Project setup
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../config_yaml/" class="md-nav__link">
-        Config.yaml file
+      <a href="../create_module/" class="md-nav__link">
+        1. Create a module
       </a>
     </li>
   
@@ -471,7 +439,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_5" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" checked>
       
       
         
@@ -492,18 +460,18 @@
         
         
         <div class="md-nav__link md-nav__link--index md-nav__link--active">
-          <a href="./">Modules</a>
+          <a href="./">2. Set up a module</a>
           
-            <label for="__nav_2_2_5">
+            <label for="__nav_2_2_3">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_5_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_2_2_5">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2_3">
           <span class="md-nav__icon md-icon"></span>
-          Modules
+          2. Set up a module
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1203,6 +1171,8 @@
         
           
         
+          
+        
       
       
         
@@ -1223,6 +1193,20 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03_howto/00_config_yaml/" class="md-nav__link">
+        Setup a config.yaml
+      </a>
+    </li>
+  
+
             
           
             
@@ -1431,19 +1415,37 @@
   
 
 
-  <h1>Index</h1>
-
-<h2 id="omnibenchmark-modules">Omnibenchmark modules</h2>
-<p>Omnibenchmark uses the <strong>Renku</strong> platform to run open and continuous benchmarks. 
-To contribute an independent module to one of the existing benchmarks start by creating a <code>new renku project &lt;https://omnibenchmark.readthedocs.io/en/latest/start/01_project_setup.html#start-a-renku-project&gt;</code><em>. 
-Each module consists of a Docker image, that defines its environment, a dataset to store outputs and metadata, a workflow that describes how to generate outputs and input and parameter datasets with input files and parameter definitions, if they are used. 
-Thus each module is an independent benchmark part and can be run, used and modified independently as such. 
-Modules are connected by importing (result) datasets from other modules as input datasets and will automatically be updated according to them.
-All relevant information on how to run a specific module are stored as <code>OmniObject &lt;https://omnibenchmark.readthedocs.io/en/latest/topic_guides/classes/01_omni_object.html&gt;</code></em>.
-The most convenient way to generate an instance of an <strong>OmniObject</strong> is to build it from a <code>config.yaml &lt;https://omnibenchmark.readthedocs.io/en/latest/topic_guides/02_config_yaml.html&gt;</code>_ file <section-config>`.
-This structure is universal all modules can be build upon it. 
-In the following we describe example setups for different benchmark stages (dataset modules, methods modules, metrics modules). 
-Depending on the benchmark these can be flexibly extended and adapted to the benchmark structure.</p>
+<h1 id="2-set-up-a-module">2. Set up a module</h1>
+<p>The basic steps required to set up a module are described in the README of your project. Depending on your project, you may also have to modify the following files of your project: </p>
+<ul>
+<li>
+<p><code>Dockerfile</code>; extra linux (ubuntu) software requirements can be specified here (<code>R</code> and <code>Python</code> installed by default).</p>
+</li>
+<li>
+<p><code>install.R</code>; to manage extra R dependencies</p>
+</li>
+<li>
+<p><code>requirements.txt</code>; to manage extra Python dependencies</p>
+</li>
+</ul>
+<p>Detailed instruction can be found <a href="https://renku.readthedocs.io/en/latest/how-to-guides/general/install-packages.html#">in the Reku documentation</a>.</p>
+<p>Upon any commit, Renku will automatically build a new Docker container based on these files. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Having independent modules also means that you can test your code and work on your project without affecting the omnibenchmark until you submit it. Only when a project is included into an omnibenchmark 'orchestrator', it becomes part of the benchmark itself.</p>
+</div>
+<h2 id="detailed-instructions-for">Detailed instructions for</h2>
+<ul>
+<li>
+<p><a href="01_data/"><strong>Input data</strong></a>; Dataset with known ground-truth to run methods on.</p>
+</li>
+<li>
+<p><a href="02_method/"><strong>Methods</strong></a>; Methods that will be applied on the (processed) datasets and have their output evaluated. Also use their </p>
+</li>
+<li>
+<p><a href="03_metric/"><strong>Metrics</strong></a>; Performance metrics used to evaluate methods outputs. </p>
+</li>
+</ul>
 
 
 
