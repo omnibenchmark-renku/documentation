@@ -14,7 +14,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="templates/">
+        <link rel="next" href="create_module/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.8">
@@ -390,10 +390,6 @@
         
           
         
-          
-        
-          
-        
       
       
         
@@ -422,36 +418,8 @@
   
   
     <li class="md-nav__item">
-      <a href="templates/" class="md-nav__link">
-        Start from templates
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="project_setup/" class="md-nav__link">
-        Project setup
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="config_yaml/" class="md-nav__link">
-        Config.yaml file
+      <a href="create_module/" class="md-nav__link">
+        1. Create a module
       </a>
     </li>
   
@@ -469,7 +437,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
       
       
         
@@ -490,18 +458,18 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="modules/">Modules</a>
+          <a href="setup_module/">2. Set up a module</a>
           
-            <label for="__nav_2_2_5">
+            <label for="__nav_2_2_3">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2_2_5">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_3">
           <span class="md-nav__icon md-icon"></span>
-          Modules
+          2. Set up a module
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -513,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="modules/01_data/" class="md-nav__link">
+      <a href="setup_module/01_data/" class="md-nav__link">
         Input data
       </a>
     </li>
@@ -527,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="modules/02_method/" class="md-nav__link">
+      <a href="setup_module/02_method/" class="md-nav__link">
         Methods
       </a>
     </li>
@@ -541,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="modules/03_metric/" class="md-nav__link">
+      <a href="setup_module/03_metric/" class="md-nav__link">
         Metrics
       </a>
     </li>
@@ -555,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="modules/04_submit/" class="md-nav__link">
+      <a href="setup_module/04_submit/" class="md-nav__link">
         Submission
       </a>
     </li>
@@ -1201,6 +1169,8 @@
         
           
         
+          
+        
       
       
         
@@ -1221,6 +1191,20 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03_howto/00_config_yaml/" class="md-nav__link">
+        Setup a config.yaml
+      </a>
+    </li>
+  
+
             
           
             
@@ -1430,8 +1414,10 @@
 
 
 <h1 id="module-contributor">Module contributor</h1>
-<p>This section is dedicated for <strong>module contributors</strong>. It will showcase how to add a dataset, a method or a metric to an existing Omnibenchmark. </p>
+<p>This section is dedicated for <strong>module contributors</strong>, basic users that would like to add a new module (dataset, method, metric) to an existing Omnibenchmark. This section will show how to add a new module to an existing Omnibenchmark. </p>
 <p>This section will <strong>not</strong> show you how to create/ setup an Omnibenchmark (see the <code>Benchmarker</code> section) and how to visualize and interpret the evaluation results (see the <code>Method user</code> section).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>Before starting, make sure that you have;</p>
 <ol>
 <li>
@@ -1444,6 +1430,7 @@
 <p>A script for importing data, or a wrapper of a method or a metric.</p>
 </li>
 </ol>
+</div>
 
 
 

@@ -21,15 +21,13 @@ nav:
         - 01_getting_started/index.md
         - Module contributor: 
             - 01_getting_started/01_module_contr/index.md
-            - Start from templates: 01_getting_started/01_module_contr/templates.md
-            - Project setup: 01_getting_started/01_module_contr/project_setup.md
-            - Config.yaml file: 01_getting_started/01_module_contr/config_yaml.md
-            - Modules: 
-                - 01_getting_started/01_module_contr/modules/index.md
-                - Input data: 01_getting_started/01_module_contr/modules/01_data.md
-                - Methods:  01_getting_started/01_module_contr/modules/02_method.md
-                - Metrics:  01_getting_started/01_module_contr/modules/03_metric.md
-                - Submission:  01_getting_started/01_module_contr/modules/04_submit.md
+            - 1. Create a module: 01_getting_started/01_module_contr/create_module.md
+            - 2. Set up a module: 
+                - 01_getting_started/01_module_contr/setup_module/index.md
+                - Input data: 01_getting_started/01_module_contr/setup_module/01_data.md
+                - Methods:  01_getting_started/01_module_contr/setup_module/02_method.md
+                - Metrics:  01_getting_started/01_module_contr/setup_module/03_metric.md
+                - Submission:  01_getting_started/01_module_contr/setup_module/04_submit.md
         - Benchmarker: 
             - 01_getting_started/02_benchmarker/index.md
         - Method user: 
@@ -62,6 +60,7 @@ nav:
             - Deploy renkulab: 02_advanced/04_admin/07_renkulab.md        
     - How-to guides: 
         - 03_howto/index.md
+        - Setup a config.yaml: 03_howto/00_config_yaml.md
         - Build object: 03_howto/01_build_object.md
         - Create dataset: 03_howto/02_create_dataset.md
         - Generate workflow: 03_howto/03_generate_workflow.md
