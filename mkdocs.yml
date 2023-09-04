@@ -71,6 +71,14 @@ nav:
         - Templates project creation: 04_bugs/01_templates.md
         - Python CLI: 04_bugs/02_python.md
         - Renku interface: 04_bugs/03_renku_interface.md
+    - Events: 
+        - 05_events/index.md
+        - Robinson Hackathons: 05_events/robinsons_hackathons.md
+        - '[BC]2': 
+            - 05_events/BC2/index.md 
+            - 05_events/BC2/step_by_step.md
+            - 05_events/BC2/presentations.md
+            - 05_events/BC2/hands-on_sessions.md
     - About: about.md
 
 theme:
