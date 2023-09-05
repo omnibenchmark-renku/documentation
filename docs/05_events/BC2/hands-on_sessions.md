@@ -45,7 +45,19 @@ You can view the output requirements in this centralized repo:
 
 #### 3. Use the `omniValidator` inside your session 
 
-TBA
+The requirements for a given omnibenchmark and keyword can be displayed by running the following lines: 
+
+```
+import omniValidator as ov
+ov.display_requirements(
+    benchmark='BENCHMARK_NAME', 
+    keyword='STEP_KEYWORD')
+```
+
+where  `BENCHMARK_NAME` is the name of the benchmark (`omniclustering`) and `STEP_KEYWORD` is the keyword associated to the type of module you are working on (`omniclustering_dataset`, `omniclustering_method` or `omniclustering_metric`).
+
+!!! info
+    `omniValidator` is ported with all projects and doesn't need to be installed.
 
 ### Output / Omnibenchmark status
 
