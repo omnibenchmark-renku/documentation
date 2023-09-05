@@ -1734,7 +1734,17 @@
 <p>You can view the output requirements in this centralized repo: </p>
 <p><a href="https://github.com/omnibenchmark/omni_essentials/tree/main/schemas/omniclustering">https://github.com/omnibenchmark/omni_essentials/tree/main/schemas/omniclustering</a></p>
 <h4 id="3-use-the-omnivalidator-inside-your-session">3. Use the <code>omniValidator</code> inside your session</h4>
-<p>TBA</p>
+<p>The requirements for a given omnibenchmark and keyword can be displayed by running the following lines: </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>import omniValidator as ov
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>ov.display_requirements(
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    benchmark=&#39;BENCHMARK_NAME&#39;, 
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    keyword=&#39;STEP_KEYWORD&#39;)
+</span></code></pre></div>
+<p>where  <code>BENCHMARK_NAME</code> is the name of the benchmark (<code>omniclustering</code>) and <code>STEP_KEYWORD</code> is the keyword associated to the type of module you are working on (<code>omniclustering_dataset</code>, <code>omniclustering_method</code> or <code>omniclustering_metric</code>).</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><code>omniValidator</code> is ported with all projects and doesn't need to be installed.</p>
+</div>
 <h3 id="output-omnibenchmark-status">Output / Omnibenchmark status</h3>
 <p>An overview of the <strong>Omnibenchmark components</strong> is available on the <a href="http://omnibenchmark.org/p/benchmarks/">Omnibenchmark webpage</a></p>
 <p>The <strong>output</strong> of the benchmark is available on our <a href="http://imlspenticton.uzh.ch:3840/omniclustering/">shiny app server</a></p>
