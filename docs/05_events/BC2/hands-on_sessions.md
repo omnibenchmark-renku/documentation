@@ -1,5 +1,5 @@
 
-# Hands-on sessions
+# Hands-on sessions - omniclustering
 
 
 ### Resources 

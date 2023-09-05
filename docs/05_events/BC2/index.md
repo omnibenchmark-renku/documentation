@@ -1,6 +1,10 @@
 
 # [BC]2 Half-day tutorial - September 11th 2023
 
+## Resources 
+
+ - [__Working document__](https://docs.google.com/document/d/1P5OdJnTJjsivWTV5-BpOhCQKAywOWM_o1FXkZ_YhukE/edit?usp=sharing)
+
 ## __Sections__
 
 - [__Step-by-step guide__](step_by_step.md)
