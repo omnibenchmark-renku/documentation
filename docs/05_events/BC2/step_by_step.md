@@ -1,12 +1,8 @@
 # Step-by-step guide
 
-This guide is an adaptation of the [Module contributor guide - Set up a module](../../01_getting_started/01_module_contr/setup_module/index.md) section, modified to show how to add a method's wrapper to a method. As a showcase, we will **add a classification method to our example Iris omnibenchmark** (a simple benchmark using the Iris data). 
+This short guide will show you how to add a method's wrapper to Omnibenchmark. We will **add a classification method to our example Iris omnibenchmark** (a simple benchmark using the Iris dataset). 
 
-The current state of the Iris omnibenchmark can be viewed here: 
-
-[http://omnibenchmark.org/p/benchmarks/#iris_example](http://omnibenchmark.org/p/benchmarks/#iris_example)
-
-## **1. Create a new project**
+## **1. Create a new project** 
 
 Each of an Omnibenchmark is basically a **Renku project** (a Gitlab project with many tweaks). To add a new method to the Iris Omnibenchmark, we will create a new Renku project to host our code. Luckily, you don't have to code a whole new Renku project from scratch! You will see how to **add pre-filled project to any Omnibenchmark**: 
 
