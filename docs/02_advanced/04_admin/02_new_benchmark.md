@@ -1,14 +1,14 @@
 This guide relies on the `default` omnibenchmark components (gitlab runners, triplestore etc).
 
-GUI click/fill instructions have been tested in [https://renkulab.io/gitlab](https://renkulab.io/gitlab) running GitLab Community Edition 14.10.5 and might change in future releases.
+GUI click/fill instructions have been tested in [https://gitlab.renkulab.io](https://gitlab.renkulab.io) running GitLab Community Edition 14.10.5 and might change in future releases.
 
 ## Foreground
 
 The starting point for a non automated benchmark creation is [renkulab.io](https://renkulab.io).
 
-Interestingly, renkulab.io's gitlab is available at [renkulab.io/gitlab](https://renkulab.io/gitlab). If you log in to renkulab.io you'll be logged in to the gitlab too. To switch easily from renku's GUI to gitlab's GUI please notice the `projects` or `gitlab` components of these URLs: 
+Interestingly, renkulab.io's gitlab is available at [gitlab.renkulab.io](https://gitlab.renkulab.io). If you log in to renkulab.io you'll be logged in to the gitlab too. To switch easily from renku's GUI to gitlab's GUI please notice the `projects` or `gitlab` components of these URLs: 
 
-- [https://renkulab.io/gitlab/omnibenchmark/iris_example/iris-dataset](https://renkulab.io/gitlab/omnibenchmark/iris_example/iris-dataset) 
+- [https://gitlab.renkulab.io/omnibenchmark/iris_example/iris-dataset](https://gitlab.renkulab.io/omnibenchmark/iris_example/iris-dataset) 
 
 vs
 
@@ -18,11 +18,11 @@ Both refer to the same repository.
 
 ### Gitlab group (and subgroups)
 
-Repository groups can be created by browsing https://renkulab.io/gitlab pressing `new group`. Repository subgroups can be created by browsing a group, i.e.  https://renkulab.io/gitlab/omb_benchmarks , and pressing `new subgroup`. . If interested in creating a subgroup below 'known' omnibenchmark groups such as https://renkulab.io/gitlab/omb_benchmarks  or https://renkulab.io/gitlab/omnibenchmark your user needs to be granted rights; contact the omnibecnhmark team if so.
+Repository groups can be created by browsing https://gitlab.renkulab.io pressing `new group`. Repository subgroups can be created by browsing a group, i.e.  https://gitlab.renkulab.io/omb_benchmarks , and pressing `new subgroup`. . If interested in creating a subgroup below 'known' omnibenchmark groups such as https://gitlab.renkulab.io/omb_benchmarks  or https://gitlab.renkulab.io/omnibenchmark your user needs to be granted rights; contact the omnibecnhmark team if so.
 
 **Tip**: you can add other people to your benchmark group/subgroup by pressing (left panel) `(sub)group information -> Members`.
 
-**Tip**: it's advisable to register a dedicated gitlab runner when generating a group, and use it as a group runner for CI/CD. For that, check [our runner's docs](../04_runner).
+**Tip**: it's advisable to register a dedicated gitlab runner when generating a group, and use it as a group runner for CI/CD. For that, check [our runner's docs](04_runner.md).
 
 ### Benchmark masked variables/tokens
 
@@ -31,8 +31,8 @@ Once you've created the group or subgroup where your benchmark will leave (or at
 ### User tokens
 
 A personal gitlab token will allow to automate actions. To generate one:
-- log in at [https://renkulab.io/gitlab](https://renkulab.io/gitlab)
-- visit [https://renkulab.io/gitlab/-/profile/personal_access_tokens](https://renkulab.io/gitlab/-/profile/personal_access_tokens)
+- log in at [https://gitlab.renkulab.io](https://gitlab.renkulab.io)
+- visit [https://gitlab.renkulab.io/-/profile/personal_access_tokens](https://gitlab.renkulab.io/-/profile/personal_access_tokens)
 - create one with the adequate scope (i.e. read API)
 
 This token won't be used by omnibenchmark, but can be handy to have.
@@ -41,7 +41,7 @@ This token won't be used by omnibenchmark, but can be handy to have.
 
 The core component of omnibenchmark is an orchestrator, which stitches together datasets, methods and metrics. Without an orchestrator there is no benchmark. Still, you can set up the orchestrator last.
 
-Orchestrators are unusual omnibenchmark components. They're mainly a gitlab CI/CD yaml. An [example orchestrator](https://renkulab.io/gitlab/omnibenchmark/iris_example/iris-orchestrator/-/blob/master/.gitlab-ci.yml) looks like this:
+Orchestrators are unusual omnibenchmark components. They're mainly a gitlab CI/CD yaml. An [example orchestrator](https://gitlab.renkulab.io/omnibenchmark/iris_example/iris-orchestrator/-/blob/master/.gitlab-ci.yml) looks like this:
 
 ```
 variables:
@@ -95,7 +95,7 @@ The first stanza (`variables`) defines variables needed for overall git behaviou
 
 The second stanza (`image_build`) generates a renku-powered docker image (i.e. for interactive sessions).
 
-The third stanza (`trigger_iris_dataset`) is how most of the orchestrator CI/CD tasks look like: they trigger downstream projects CI/CDs; that is, their `gitlab-ci.yaml`. In the example above, triggers [the iris dataset CI/CD](https://renkulab.io/gitlab/omnibenchmark/iris_example/iris-dataset/-/blob/master/.gitlab-ci.yml).
+The third stanza (`trigger_iris_dataset`) is how most of the orchestrator CI/CD tasks look like: they trigger downstream projects CI/CDs; that is, their `gitlab-ci.yaml`. In the example above, triggers [the iris dataset CI/CD](https://gitlab.renkulab.io/omnibenchmark/iris_example/iris-dataset/-/blob/master/.gitlab-ci.yml).
 
 ### Terraforming via templates
 
@@ -121,4 +121,4 @@ Infrastructure-wise, some manual actions need to be done to start a new benchmar
 
 ### Runners
 
-It's advisable to register a dedicated gitlab runner when generating a benchmark, and use it as a group runner for CI/CD. For that, check [our runner's docs](../04_runner)
+It's advisable to register a dedicated gitlab runner when generating a benchmark, and use it as a group runner for CI/CD. For that, check [our runner's docs](04_runner).

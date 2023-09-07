@@ -33,9 +33,9 @@ Besides, omnibenchmark relies on a set of python modules and R packages, which a
 
 Mind some of our docs are missing; drafts are listed as &#10003;, ready-to-use docs as 	&#9989;.
 
-1. [Services overview](01_services)  &#10003;
-2. [Start a new benchmark](02_new_benchmark) &#10003;
-3. [Set up a triplestore](03_triplestore) 
+1. [Services overview](01_services.md)  &#10003;
+2. [Start a new benchmark](02_new_benchmark.md) &#10003;
+3. [Set up a triplestore](03_triplestore.md) 
 4. [Register a runner](04_runner.md) &#9989;
 5. [Serve bettr](05_bettr.md) &#9989;
 6. [Serve a dashboard](06_dashboard.md) 

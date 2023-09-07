@@ -47,7 +47,7 @@ sudo useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/
 
 ## Register a gitlab runner in your (linux) machine 
 
-On GitLab Community Edition 14.10.5 (might sligthly vary within versions) visit your repository **or group of repositories**, i.e. [https://renkulab.io/gitlab/omb_benchmarks](this repository), go to `CI/CD` -> `Runners` (caution, not to `Settings -> CI/CD`, click `Register a group runner`, copy to the clipboard the registration token.
+On GitLab Community Edition 14.10.5 (might sligthly vary within versions) visit your repository **or group of repositories**, i.e. [https://gitlab.renkulab.io/omb_benchmarks](this repository), go to `CI/CD` -> `Runners` (caution, not to `Settings -> CI/CD`, click `Register a group runner`, copy to the clipboard the registration token.
 
 Let's assume the token is `94daGGiXCgwthisisnotarealtoken`.
 
@@ -61,7 +61,7 @@ EXECUTOR="docker"
 
 sudo gitlab-runner register \
   --non-interactive \
-  --url "https://renkulab.io/gitlab/" \
+  --url "https://gitlab.renkulab.io" \
   --registration-token "$REGISTRATION_TOKEN" \
   --description "$RUNNER_NAME" \
   -locked=false  \
@@ -94,7 +94,7 @@ check_interval = 0
 
 [[runners]]
   name = "tesuto-robinsonlab-gitlab-docker"
-  url = "https://renkulab.io/gitlab/"
+  url = "https://gitlab.renkulab.io"
   token = "YfztssssssssssssssN"
   executor = "docker"
   [runners.custom_build_dir]
@@ -115,7 +115,7 @@ check_interval = 0
 
 [[runners]]
   name = "iris-tesuto-robinsonlab-gitlab-docker"
-  url = "https://renkulab.io/gitlab/"
+  url = "https://gitlab.renkulab.io"
   token = "xbxxxxxxxxxxxxxKi"
   executor = "docker"
   [runners.custom_build_dir]
