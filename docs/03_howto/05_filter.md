@@ -1,10 +1,10 @@
 
 # Filter Inputs and Parameter to be excluded
 
-Some methods are not applicable for all input datasets or the entire parameter range. Maybe the parameter range to use depends on features of the input dataset. `omnibenchmark` allows filtering (filter out) at different level to flexibly specify input data bundles to exclude, parameter limits and input-parameter combinations to ignore. See below for different types of filter with examples.
+Some methods are not applicable for all input datasets or the entire parameter range. For example, perhaps the parameter range to use depends on features of the input dataset. `omnibenchmark` allows filtering (i.e., to filter out or remove) at different levels to specify input data bundles to exclude, parameter limits and input-parameter combinations to ignore. See below for different types of filters with examples.
 
 !!! Note
-    In general `omnibenchmark` allows detailed specification of the accepted inputs and parameter to __include__, e.g., through *keywords* or *explicit definition*. Especially keyword-based specification is limited by it's extend to generalize for new (not yet included inputs/parameter). Filtering inputs and outputs to __exclude__ allows automatic and programmatic specification to extend existing generalizations.     
+    In general `omnibenchmark` allows detailed specification of the accepted inputs and parameter to __include__, e.g., through *keywords* or *explicit definition*. Especially keyword-based specification is limited by its extent to generalize for new (not yet included) inputs/parameter. Filtering inputs and outputs to __exclude__ allows automatic and programmatic specification to extend existing generalizations.     
 
 
 
