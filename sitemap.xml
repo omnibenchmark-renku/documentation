@@ -2,247 +2,247 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://example.com/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/01_landing/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/about/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/01_getting_started/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/01_getting_started/01_module_contr/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/01_getting_started/01_module_contr/create_module/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/01_getting_started/01_module_contr/setup_module/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/01_getting_started/01_module_contr/setup_module/01_data/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/01_getting_started/01_module_contr/setup_module/02_method/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/01_getting_started/01_module_contr/setup_module/03_metric/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/01_getting_started/01_module_contr/setup_module/04_submit/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/01_getting_started/02_benchmarker/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/01_getting_started/03_method_user/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/02_advanced/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/02_advanced/01_module_contr/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/02_advanced/01_module_contr/omni_object/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/02_advanced/01_module_contr/omni_object/classes/01_omni_object/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/02_advanced/01_module_contr/omni_object/classes/02_omni_input/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/02_advanced/01_module_contr/omni_object/classes/03_omni_parameter/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/02_advanced/01_module_contr/omni_object/classes/04_omni_output/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/02_advanced/01_module_contr/omni_object/classes/05_omni_command/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/02_advanced/01_module_contr/omni_object/classes/06_omni_plan/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/02_advanced/02_benchmarker/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/02_advanced/03_method_user/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/02_advanced/04_admin/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/02_advanced/04_admin/01_services/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/02_advanced/04_admin/02_new_benchmark/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/02_advanced/04_admin/03_triplestore/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/02_advanced/04_admin/04_runner/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/02_advanced/04_admin/05_bettr/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/02_advanced/04_admin/06_dashboard/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/02_advanced/04_admin/07_renkulab/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/03_howto/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/03_howto/00_config_yaml/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/03_howto/01_build_object/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/03_howto/02_create_dataset/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/03_howto/03_generate_workflow/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/03_howto/04_update_object/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/03_howto/05_filter/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/04_bugs/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/04_bugs/01_templates/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/04_bugs/02_python/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/04_bugs/03_renku_interface/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/05_events/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/05_events/robinsons_hackathons/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/05_events/BC2/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/05_events/BC2/hands-on_sessions/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/05_events/BC2/presentations/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/05_events/BC2/step_by_step/</loc>
-         <lastmod>2023-09-06</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
