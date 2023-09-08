@@ -1637,7 +1637,7 @@
   
     <li class="md-nav__item">
       <a href="../../../05_events/BC2/presentations/" class="md-nav__link">
-        Presentations
+        Presentation
       </a>
     </li>
   
@@ -1707,12 +1707,12 @@
   <h1>Start a new benchmark</h1>
 
 <p>This guide relies on the <code>default</code> omnibenchmark components (gitlab runners, triplestore etc).</p>
-<p>GUI click/fill instructions have been tested in <a href="https://renkulab.io/gitlab">https://renkulab.io/gitlab</a> running GitLab Community Edition 14.10.5 and might change in future releases.</p>
+<p>GUI click/fill instructions have been tested in <a href="https://gitlab.renkulab.io">https://gitlab.renkulab.io</a> running GitLab Community Edition 14.10.5 and might change in future releases.</p>
 <h2 id="foreground">Foreground</h2>
 <p>The starting point for a non automated benchmark creation is <a href="https://renkulab.io">renkulab.io</a>.</p>
-<p>Interestingly, renkulab.io's gitlab is available at <a href="https://renkulab.io/gitlab">renkulab.io/gitlab</a>. If you log in to renkulab.io you'll be logged in to the gitlab too. To switch easily from renku's GUI to gitlab's GUI please notice the <code>projects</code> or <code>gitlab</code> components of these URLs: </p>
+<p>Interestingly, renkulab.io's gitlab is available at <a href="https://gitlab.renkulab.io">gitlab.renkulab.io</a>. If you log in to renkulab.io you'll be logged in to the gitlab too. To switch easily from renku's GUI to gitlab's GUI please notice the <code>projects</code> or <code>gitlab</code> components of these URLs: </p>
 <ul>
-<li><a href="https://renkulab.io/gitlab/omnibenchmark/iris_example/iris-dataset">https://renkulab.io/gitlab/omnibenchmark/iris_example/iris-dataset</a> </li>
+<li><a href="https://gitlab.renkulab.io/omnibenchmark/iris_example/iris-dataset">https://gitlab.renkulab.io/omnibenchmark/iris_example/iris-dataset</a> </li>
 </ul>
 <p>vs</p>
 <ul>
@@ -1720,20 +1720,20 @@
 </ul>
 <p>Both refer to the same repository.</p>
 <h3 id="gitlab-group-and-subgroups">Gitlab group (and subgroups)</h3>
-<p>Repository groups can be created by browsing https://renkulab.io/gitlab pressing <code>new group</code>. Repository subgroups can be created by browsing a group, i.e.  https://renkulab.io/gitlab/omb_benchmarks , and pressing <code>new subgroup</code>. . If interested in creating a subgroup below 'known' omnibenchmark groups such as https://renkulab.io/gitlab/omb_benchmarks  or https://renkulab.io/gitlab/omnibenchmark your user needs to be granted rights; contact the omnibecnhmark team if so.</p>
+<p>Repository groups can be created by browsing https://gitlab.renkulab.io pressing <code>new group</code>. Repository subgroups can be created by browsing a group, i.e.  https://gitlab.renkulab.io/omb_benchmarks , and pressing <code>new subgroup</code>. . If interested in creating a subgroup below 'known' omnibenchmark groups such as https://gitlab.renkulab.io/omb_benchmarks  or https://gitlab.renkulab.io/omnibenchmark your user needs to be granted rights; contact the omnibecnhmark team if so.</p>
 <p><strong>Tip</strong>: you can add other people to your benchmark group/subgroup by pressing (left panel) <code>(sub)group information -&gt; Members</code>.</p>
-<p><strong>Tip</strong>: it's advisable to register a dedicated gitlab runner when generating a group, and use it as a group runner for CI/CD. For that, check <a href="../04_runner">our runner's docs</a>.</p>
+<p><strong>Tip</strong>: it's advisable to register a dedicated gitlab runner when generating a group, and use it as a group runner for CI/CD. For that, check <a href="../04_runner/">our runner's docs</a>.</p>
 <h3 id="benchmark-masked-variablestokens">Benchmark masked variables/tokens</h3>
 <p>Once you've created the group or subgroup where your benchmark will leave (or at least your orchestrator will), you'll need to create a token with <code>api_read</code> scope. For that, visit your <strong>group</strong> <code>Settings -&gt; CI/CD -&gt; Variables</code> setting and create a nonprotected, masked variable, for instance `OMB_ACCESS_TOKEN~. And keep its content stored somewhere for future usage. </p>
 <h3 id="user-tokens">User tokens</h3>
 <p>A personal gitlab token will allow to automate actions. To generate one:
-- log in at <a href="https://renkulab.io/gitlab">https://renkulab.io/gitlab</a>
-- visit <a href="https://renkulab.io/gitlab/-/profile/personal_access_tokens">https://renkulab.io/gitlab/-/profile/personal_access_tokens</a>
+- log in at <a href="https://gitlab.renkulab.io">https://gitlab.renkulab.io</a>
+- visit <a href="https://gitlab.renkulab.io/-/profile/personal_access_tokens">https://gitlab.renkulab.io/-/profile/personal_access_tokens</a>
 - create one with the adequate scope (i.e. read API)</p>
 <p>This token won't be used by omnibenchmark, but can be handy to have.</p>
 <h3 id="orchestrator">Orchestrator</h3>
 <p>The core component of omnibenchmark is an orchestrator, which stitches together datasets, methods and metrics. Without an orchestrator there is no benchmark. Still, you can set up the orchestrator last.</p>
-<p>Orchestrators are unusual omnibenchmark components. They're mainly a gitlab CI/CD yaml. An <a href="https://renkulab.io/gitlab/omnibenchmark/iris_example/iris-orchestrator/-/blob/master/.gitlab-ci.yml">example orchestrator</a> looks like this:</p>
+<p>Orchestrators are unusual omnibenchmark components. They're mainly a gitlab CI/CD yaml. An <a href="https://gitlab.renkulab.io/omnibenchmark/iris_example/iris-orchestrator/-/blob/master/.gitlab-ci.yml">example orchestrator</a> looks like this:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>variables:
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  GIT_STRATEGY: fetch
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  GIT_SSL_NO_VERIFY: &quot;true&quot;
@@ -1782,7 +1782,7 @@
 <li>CI_PUSH_TOKEN</li>
 </ul>
 <p>The second stanza (<code>image_build</code>) generates a renku-powered docker image (i.e. for interactive sessions).</p>
-<p>The third stanza (<code>trigger_iris_dataset</code>) is how most of the orchestrator CI/CD tasks look like: they trigger downstream projects CI/CDs; that is, their <code>gitlab-ci.yaml</code>. In the example above, triggers <a href="https://renkulab.io/gitlab/omnibenchmark/iris_example/iris-dataset/-/blob/master/.gitlab-ci.yml">the iris dataset CI/CD</a>.</p>
+<p>The third stanza (<code>trigger_iris_dataset</code>) is how most of the orchestrator CI/CD tasks look like: they trigger downstream projects CI/CDs; that is, their <code>gitlab-ci.yaml</code>. In the example above, triggers <a href="https://gitlab.renkulab.io/omnibenchmark/iris_example/iris-dataset/-/blob/master/.gitlab-ci.yml">the iris dataset CI/CD</a>.</p>
 <h3 id="terraforming-via-templates">Terraforming via templates</h3>
 <p><a href="https://github.com/omnibenchmark/contributed-project-templates">Omnibenchmark's renku templates</a> help to create new benchmark components.</p>
 <h3 id="terraforming-via-gitlab-api">Terraforming via gitlab API</h3>
@@ -1800,7 +1800,7 @@
 <li>add a triplestore apache reverse proxy</li>
 </ul>
 <h3 id="runners">Runners</h3>
-<p>It's advisable to register a dedicated gitlab runner when generating a benchmark, and use it as a group runner for CI/CD. For that, check <a href="../04_runner">our runner's docs</a></p>
+<p>It's advisable to register a dedicated gitlab runner when generating a benchmark, and use it as a group runner for CI/CD. For that, check <a href="04_runner">our runner's docs</a>.</p>
 
 
 

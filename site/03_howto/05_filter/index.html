@@ -1605,7 +1605,7 @@
   
     <li class="md-nav__item">
       <a href="../../05_events/BC2/presentations/" class="md-nav__link">
-        Presentations
+        Presentation
       </a>
     </li>
   
@@ -1673,10 +1673,10 @@
 
 
 <h1 id="filter-inputs-and-parameter-to-be-excluded">Filter Inputs and Parameter to be excluded</h1>
-<p>Some methods are not applicable for all input datasets or the entire parameter range. Maybe the parameter range to use depends on features of the input dataset. <code>omnibenchmark</code> allows filtering (filter out) at different level to flexibly specify input data bundles to exclude, parameter limits and input-parameter combinations to ignore. See below for different types of filter with examples.</p>
+<p>Some methods are not applicable for all input datasets or the entire parameter range. For example, perhaps the parameter range to use depends on features of the input dataset. <code>omnibenchmark</code> allows filtering (i.e., to filter out or remove) at different levels to specify input data bundles to exclude, parameter limits and input-parameter combinations to ignore. See below for different types of filters with examples.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In general <code>omnibenchmark</code> allows detailed specification of the accepted inputs and parameter to <strong>include</strong>, e.g., through <em>keywords</em> or <em>explicit definition</em>. Especially keyword-based specification is limited by it's extend to generalize for new (not yet included inputs/parameter). Filtering inputs and outputs to <strong>exclude</strong> allows automatic and programmatic specification to extend existing generalizations.     </p>
+<p>In general <code>omnibenchmark</code> allows detailed specification of the accepted inputs and parameter to <strong>include</strong>, e.g., through <em>keywords</em> or <em>explicit definition</em>. Especially keyword-based specification is limited by its extent to generalize for new (not yet included) inputs/parameter. Filtering inputs and outputs to <strong>exclude</strong> allows automatic and programmatic specification to extend existing generalizations.     </p>
 </div>
 <h2 id="filter-explicit-input-data-bundles">Filter explicit input data bundles</h2>
 <p>While input data bundles with a certain <em>keyword</em> should typically fullfill all requirements of downstream modules, there can be module-specifc requirements, which are violated by single upstream data bundles. A possible solution is to explicitly exclude certain data bundles by name as inputs. These data bundles will automatically be <strong>ignored</strong> upon data bundle import and input - output file mapping. Input filtering can be specified within the <code>config.yaml</code> or by using attributes of the <strong>OmniObject</strong> in <code>run_workflow.py</code>:</p>

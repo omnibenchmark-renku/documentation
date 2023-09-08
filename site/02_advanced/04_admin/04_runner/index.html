@@ -1596,7 +1596,7 @@
   
     <li class="md-nav__item">
       <a href="../../../05_events/BC2/presentations/" class="md-nav__link">
-        Presentations
+        Presentation
       </a>
     </li>
   
@@ -1703,7 +1703,7 @@
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>sudo useradd --comment &#39;GitLab Runner&#39; --create-home gitlab-runner --shell /bin/bash
 </span></code></pre></div>
 <h2 id="register-a-gitlab-runner-in-your-linux-machine">Register a gitlab runner in your (linux) machine</h2>
-<p>On GitLab Community Edition 14.10.5 (might sligthly vary within versions) visit your repository <strong>or group of repositories</strong>, i.e. <a href="this repository">https://renkulab.io/gitlab/omb_benchmarks</a>, go to <code>CI/CD</code> -&gt; <code>Runners</code> (caution, not to <code>Settings -&gt; CI/CD</code>, click <code>Register a group runner</code>, copy to the clipboard the registration token.</p>
+<p>On GitLab Community Edition 14.10.5 (might sligthly vary within versions) visit your repository <strong>or group of repositories</strong>, i.e. <a href="this repository">https://gitlab.renkulab.io/omb_benchmarks</a>, go to <code>CI/CD</code> -&gt; <code>Runners</code> (caution, not to <code>Settings -&gt; CI/CD</code>, click <code>Register a group runner</code>, copy to the clipboard the registration token.</p>
 <p>Let's assume the token is <code>94daGGiXCgwthisisnotarealtoken</code>.</p>
 <p>In your gitlab-runner machine, run:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>REGISTRATION_TOKEN=&quot;94daGGiXCgwthisisnotarealtoken&quot;
@@ -1713,7 +1713,7 @@
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>sudo gitlab-runner register \
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  --non-interactive \
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  --url &quot;https://renkulab.io/gitlab/&quot; \
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  --url &quot;https://gitlab.renkulab.io&quot; \
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>  --registration-token &quot;$REGISTRATION_TOKEN&quot; \
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  --description &quot;$RUNNER_NAME&quot; \
 </span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>  -locked=false  \
@@ -1738,7 +1738,7 @@
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
 </span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>[[runners]]
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>  name = &quot;tesuto-robinsonlab-gitlab-docker&quot;
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>  url = &quot;https://renkulab.io/gitlab/&quot;
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>  url = &quot;https://gitlab.renkulab.io&quot;
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>  token = &quot;YfztssssssssssssssN&quot;
 </span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>  executor = &quot;docker&quot;
 </span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>  [runners.custom_build_dir]
@@ -1759,7 +1759,7 @@
 </span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>
 </span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>[[runners]]
 </span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>  name = &quot;iris-tesuto-robinsonlab-gitlab-docker&quot;
-</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>  url = &quot;https://renkulab.io/gitlab/&quot;
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>  url = &quot;https://gitlab.renkulab.io&quot;
 </span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>  token = &quot;xbxxxxxxxxxxxxxKi&quot;
 </span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>  executor = &quot;docker&quot;
 </span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>  [runners.custom_build_dir]
