@@ -47,7 +47,7 @@ sudo useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/
 
 ## Register a gitlab runner in your (linux) machine 
 
-On GitLab Community Edition 14.10.5 (might sligthly vary within versions) visit your repository **or group of repositories**, i.e. [https://gitlab.renkulab.io/omb_benchmarks](this repository), go to `CI/CD` -> `Runners` (caution, not to `Settings -> CI/CD`, click `Register a group runner`, copy to the clipboard the registration token.
+On GitLab Community Edition 14.10.5 (might sligthly vary within versions) visit your repository **or group of repositories**, i.e. https://gitlab.renkulab.io/omb_benchmarks, go to `CI/CD` -> `Runners` (caution, not to `Settings -> CI/CD`, click `Register a group runner`, copy to the clipboard the registration token.
 
 Let's assume the token is `94daGGiXCgwthisisnotarealtoken`.
 

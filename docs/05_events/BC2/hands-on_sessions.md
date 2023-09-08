@@ -31,6 +31,9 @@ You can find information about the required metadata (keywords, inputs, outputs,
 
 #### 1. Copy the structure of existing modules
 
+!!! warning
+    Please do not fork those to avoid transferring unintended metadata from the original project; rather, copy the module structure manually
+
 - [Example Dataset](https://gitlab.renkulab.io/omb_benchmarks/omniclustering/dataset_Koh_clustering)
 
 - [Example Method](https://gitlab.renkulab.io/omb_benchmarks/omniclustering/method_FlowSOM_clustering)
@@ -63,4 +66,4 @@ where  `BENCHMARK_NAME` is the name of the benchmark (`omniclustering`) and `STE
 
 An overview of the **Omnibenchmark components** is available on the [Omnibenchmark webpage](http://omnibenchmark.org/p/benchmarks/)
 
-The **output** of the benchmark is available on our [shiny app server](http://imlspenticton.uzh.ch:3840/omniclustering/)
+The **output** of the benchmark is available on our [shiny app server](https://bettr.omnibenchmark.org/omniclustering/).
