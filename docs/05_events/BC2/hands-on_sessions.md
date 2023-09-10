@@ -4,13 +4,15 @@
 
 ### Resources 
 
+Choose a module to add to the [Omniclustering](https://gitlab.renkulab.io/omb_benchmarks/omniclustering) benchmark. Alternatively, you can also work on the [Iris example from the step-by-step guide](step_by_step.md). 
+
 - [Downloadable single-cell **datasets**](https://bioconductor.org/packages/devel/data/experiment/manuals/DuoClustering2018/man/DuoClustering2018.pdf)
 
 - [List of wrappers of **methods** that perform single-cell clustering](https://github.com/markrobinsonuzh/scRNAseq_clustering_comparison/tree/master/Rscripts/clustering)
 
 ### Projects assignments
 
-To avoid overlaps, please state which projects you are working on: 
+To avoid overlaps, please specify which projects you are working on: 
 
 [https://docs.google.com/spreadsheets/d/1nnPSALl6up0-yjXiWLPe0R7gSUyveozUQdVmZLu2fno/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1nnPSALl6up0-yjXiWLPe0R7gSUyveozUQdVmZLu2fno/edit?usp=sharing)
 
@@ -40,13 +42,8 @@ You can find information about the required metadata (keywords, inputs, outputs,
 
 - [Example Metric](https://gitlab.renkulab.io/omb_benchmarks/omniclustering/metric_ShannonEntropy_clustering)
 
-#### 2. Check the requirements
 
-You can view the output requirements in this centralized repo: 
-
-[https://github.com/omnibenchmark/omni_essentials/tree/main/schemas/omniclustering](https://github.com/omnibenchmark/omni_essentials/tree/main/schemas/omniclustering)
-
-#### 3. Use the `omniValidator` inside your session 
+#### 2. Use the `omniValidator` inside your session 
 
 The requirements for a given omnibenchmark and keyword can be displayed by running the following lines: 
 
