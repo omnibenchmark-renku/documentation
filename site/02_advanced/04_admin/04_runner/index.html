@@ -1703,7 +1703,7 @@
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>sudo useradd --comment &#39;GitLab Runner&#39; --create-home gitlab-runner --shell /bin/bash
 </span></code></pre></div>
 <h2 id="register-a-gitlab-runner-in-your-linux-machine">Register a gitlab runner in your (linux) machine</h2>
-<p>On GitLab Community Edition 14.10.5 (might sligthly vary within versions) visit your repository <strong>or group of repositories</strong>, i.e. <a href="this repository">https://gitlab.renkulab.io/omb_benchmarks</a>, go to <code>CI/CD</code> -&gt; <code>Runners</code> (caution, not to <code>Settings -&gt; CI/CD</code>, click <code>Register a group runner</code>, copy to the clipboard the registration token.</p>
+<p>On GitLab Community Edition 14.10.5 (might sligthly vary within versions) visit your repository <strong>or group of repositories</strong>, i.e. https://gitlab.renkulab.io/omb_benchmarks, go to <code>CI/CD</code> -&gt; <code>Runners</code> (caution, not to <code>Settings -&gt; CI/CD</code>, click <code>Register a group runner</code>, copy to the clipboard the registration token.</p>
 <p>Let's assume the token is <code>94daGGiXCgwthisisnotarealtoken</code>.</p>
 <p>In your gitlab-runner machine, run:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>REGISTRATION_TOKEN=&quot;94daGGiXCgwthisisnotarealtoken&quot;
