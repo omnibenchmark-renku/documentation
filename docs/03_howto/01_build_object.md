@@ -1,4 +1,3 @@
-(section-build-yaml)=
 
 # Build an OmniObject from yaml
 

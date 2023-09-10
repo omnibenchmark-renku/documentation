@@ -1,5 +1,3 @@
-(section-datasets)=
-
 # Datasets
 
 ## Generate Datasets

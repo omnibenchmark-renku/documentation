@@ -121,4 +121,4 @@ Infrastructure-wise, some manual actions need to be done to start a new benchmar
 
 ### Runners
 
-It's advisable to register a dedicated gitlab runner when generating a benchmark, and use it as a group runner for CI/CD. For that, check [our runner's docs](04_runner).
+It's advisable to register a dedicated gitlab runner when generating a benchmark, and use it as a group runner for CI/CD. For that, check [our runner's docs](04_runner.md).
