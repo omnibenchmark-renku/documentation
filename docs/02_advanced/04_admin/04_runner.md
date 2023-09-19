@@ -83,6 +83,14 @@ sudo journalctl -u gitlab-runner
 
 ## Tips and troubleshooting
 
+The gitlab runner major.minor version should stay aligned to the gitlab(server) major and minor version. To check the gitlab runner's,
+
+```
+gitlab-runner --version
+```
+
+and to check the gitlab's, visit https://gitlab.renkulab.io/help (or similar, i.e `https://gitlab_base_url`/help).
+
 To inspect or edit/finetune the concurrency, timeout behaviour, and/or each runners details can be checked at `/etc/gitlab-runner/config.toml`. An example config file is:
 
 ```
