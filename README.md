@@ -8,6 +8,42 @@ This repo serves: https://omnibenchmark.github.io/documentation/
 
 1) Install the Python modules in `requirements.txt`.
 
+To install them inside a virtenv you can:
+
+```
+## check your path to deactivate conda envs or anything weird there
+echo $PATH
+
+# once the path is clean (i.e. with conda deactivate or what needed)
+# create a folder to store virtenvs, if not existing, and go there
+mkdir -p ~/virtenvs
+cd $_
+
+# create a python3 virtualenv with your system's python3
+python3 -m venv mkdocs
+
+# activate the virtualenv
+source ~/virtenvs/mkdocs/bin/activate
+
+# double check: which pip are we using now?
+# should be the one within the `mkdocs` virtenv
+which pip 
+
+# go to your home to clone the omni documentation repo there
+cd
+
+# clone it (master/main branch)
+git clone git@github.com:omnibenchmark/documentation.git
+
+# go to the folder, install using the requirements.txt file
+cd documentation
+pip install -r requirements.txt
+mkdocs --version
+
+# deactivate your virtenv if wanted
+deactivate
+```
+
 2) Clone the repository and bring your modifications to files in `docs`. If you wish to rearrange or reorder pages, beware to also change `mkdocs.yml`. This file defines how pages are ordered and which files they are based on.
 
 3) When you are done, **test** your modifications locally by running: 
