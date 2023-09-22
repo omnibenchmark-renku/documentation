@@ -1,15 +1,17 @@
 
 # Motivation
 
-Benchmarking is a critical step for the development of bioinformatic methods and provides important insights for their application.
+Benchmarking is a critical step in the development of bioinformatics tools, providing important insights for their application to real datasets. However, the way in which current benchmarks are conducted has many limitations:
 
-The current benchmarking scheme has many limitations:
+- They are a snapshot in time and are often already outdated by the time they are published.
 
-- It is a snapshot of the available methods at a certain time point and often already outdated when published.
+- Benchmarks are generally difficult to extend. While code is often available, it is typically not easily adaptable such that new methods and new datasets can be added to the comparison
 
-- Comparison of benchmarks is challenging: different procedures, different datasets, different evaluation criteria, etc.
+- There are no standards, making comparison of benchmarks challenging; different procedures, different datasets, different evaluation criteria, etc. are used
 
-- All of the above can lead to different conclusions among benchmarks made at different time points or at different groups.
+- There is a huge amount of duplicated effort, as methodologists use some common datasets and are repeating effort to compare methods for every new tool developed.
+
+Taken together, the above can lead to different conclusions among benchmarks made at different time points or from different groups.
 
 ## Concept
 
