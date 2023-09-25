@@ -1635,19 +1635,22 @@
 
 
 <h1 id="motivation">Motivation</h1>
-<p>Benchmarking is a critical step for the development of bioinformatic methods and provides important insights for their application.</p>
-<p>The current benchmarking scheme has many limitations:</p>
+<p>Benchmarking is a critical step in the development of bioinformatics tools, providing important insights for their application to real datasets. However, the way in which current benchmarks are conducted has many limitations:</p>
 <ul>
 <li>
-<p>It is a snapshot of the available methods at a certain time point and often already outdated when published.</p>
+<p>They are a snapshot in time and are often already outdated by the time they are published.</p>
 </li>
 <li>
-<p>Comparison of benchmarks is challenging: different procedures, different datasets, different evaluation criteria, etc.</p>
+<p>Benchmarks are generally difficult to extend. While code is often available, it is typically not easily adaptable such that new methods and new datasets can be added to the comparison</p>
 </li>
 <li>
-<p>All of the above can lead to different conclusions among benchmarks made at different time points or at different groups.</p>
+<p>There are no standards, making comparison of benchmarks challenging; different procedures, different datasets, different evaluation criteria, etc. are used</p>
+</li>
+<li>
+<p>There is a huge amount of duplicated effort, as methodologists use some common datasets and are repeating effort to compare methods for every new tool developed.</p>
 </li>
 </ul>
+<p>Taken together, the above can lead to different conclusions among benchmarks made at different time points or from different groups.</p>
 <h2 id="concept">Concept</h2>
 <p>Omnibenchmark is a modular and extensible framework based on a free open-source analytic platform, <a href="https://renkulab.io/">Renku</a>, to offer a continuous and open community benchmarking system.</p>
 <p>The framework consists of data, method and metric repositories (or “modules”) that share data components and are tracked via a knowledge graph from the Renku system. The results can be displayed in an interactive dashboard to be openly explored by anyone looking for recommendations of tools. New data, methods or metrics can be added by the community to extend the benchmark.</p>
