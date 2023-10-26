@@ -1,0 +1,43 @@
+site_name: OMNIBENCHMARK
+site_url: https://omnibenchmark.org/
+repo_url: https://github.com/omnibenchmark/documentation
+repo_name: omb-docs@github
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+ 
+nav:
+  - Home: 
+    - 'About': 'about.md'
+    - 'People': 'people.md'
+    - 'Licences': 'licenses.md'
+  - 'Benchmarks':
+    - 'Datasets': 'writing-your-docs.md'
+    - 'Results': 'styling-your-docs.md'
+    - 'Modules': 'styling-your-modules.md'
+  - Documentation:
+    - 'Getting started': 'releases.md'
+    - 'HOWTO guides': 'events.md'
+    - 'Advanced': 'advanced.md'
+  - News:
+    - 'Releases': 'releases.md'
+    - 'Events': 'events.md'
+
+theme:
+    name: mkdocs
+    features:
+        - navigation.indexes
+        - navigation.tabs
+        - toc.integrate 
+        - content.code.copy
+        - content.code.annotate
+    logo: images/omb.png

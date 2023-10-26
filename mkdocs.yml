@@ -1,7 +1,7 @@
-site_name: Omnibenchmark
-site_url: https://example.com/
+site_name: OMNIBENCHMARK
+site_url: https://omnibenchmark.org/
 repo_url: https://github.com/omnibenchmark/documentation
-repo_name: omnibenchmark/documentation
+repo_name: omb-docs@github
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -16,73 +16,87 @@ markdown_extensions:
   - pymdownx.snippets
   
 nav:
-    - Motivation: 01_landing.md
-    - Getting started:  
-        - 01_getting_started/index.md
-        - Module contributor: 
-            - 01_getting_started/01_module_contr/index.md
-            - 1. Create a module: 01_getting_started/01_module_contr/create_module.md
-            - 2. Set up a module: 
-                - 01_getting_started/01_module_contr/setup_module/index.md
-                - Input data: 01_getting_started/01_module_contr/setup_module/01_data.md
-                - Methods:  01_getting_started/01_module_contr/setup_module/02_method.md
-                - Metrics:  01_getting_started/01_module_contr/setup_module/03_metric.md
-                - Submission:  01_getting_started/01_module_contr/setup_module/04_submit.md
-        - Benchmarker: 
-            - 01_getting_started/02_benchmarker/index.md
-        - Method user: 
-            - 01_getting_started/03_method_user/index.md
+    - Home: 
+        - 'About': home/about.md
+        - 'Motivation': home/motivation.md
+        - 'People': home/people.md
+        - 'Licences': home/licenses.md
+    - 'Benchmarks':
+        - 'Datasets': 'writing-your-docs.md'
+        - 'Results': 'styling-your-docs.md'
+        - 'Modules': 'styling-your-modules.md'
+    - Documentation:
+        - Getting started:  
+            - 01_getting_started/index.md
+            - Module contributor: 
+                - 01_getting_started/01_module_contr/index.md
+                - 1. Create a module: 01_getting_started/01_module_contr/create_module.md
+                - 2. Set up a module: 
+                    - 01_getting_started/01_module_contr/setup_module/index.md
+                    - Input data: 01_getting_started/01_module_contr/setup_module/01_data.md
+                    - Methods:  01_getting_started/01_module_contr/setup_module/02_method.md
+                    - Metrics:  01_getting_started/01_module_contr/setup_module/03_metric.md
+                    - Submission:  01_getting_started/01_module_contr/setup_module/04_submit.md
+            - Benchmarker: 
+                - 01_getting_started/02_benchmarker/index.md
+            - Method user: 
+                - 01_getting_started/03_method_user/index.md
+        - Advanced: 
+            - 02_advanced/index.md
+            - Module contributor: 
+                - 02_advanced/01_module_contr/index.md
+                - The omniObject: 
+                    - 02_advanced/01_module_contr/omni_object/index.md
+                    - OmniObject: 02_advanced/01_module_contr/omni_object/classes/01_omni_object.md
+                    - OmniInput: 02_advanced/01_module_contr/omni_object/classes/02_omni_input.md
+                    - OmniParameters: 02_advanced/01_module_contr/omni_object/classes/03_omni_parameter.md
+                    - OmniOutput: 02_advanced/01_module_contr/omni_object/classes/04_omni_output.md
+                    - OmniCommand: 02_advanced/01_module_contr/omni_object/classes/05_omni_command.md
+                    - OmniPlan: 02_advanced/01_module_contr/omni_object/classes/06_omni_plan.md
+            - Benchmarker: 
+                - 02_advanced/02_benchmarker/index.md
+            - Method user: 
+                - 02_advanced/03_method_user/index.md
+            - Administrator:
+                - 02_advanced/04_admin/index.md
+                - Services overview: 02_advanced/04_admin/01_services.md
+                - Start a new benchmark: 02_advanced/04_admin/02_new_benchmark.md
+                - Set up a triplestore: 02_advanced/04_admin/03_triplestore.md
+                - Register a runner: 02_advanced/04_admin/04_runner.md
+                - Serve bettr: 02_advanced/04_admin/05_bettr.md
+                - Serve the dashboard: 02_advanced/04_admin/06_dashboard.md
+                - Deploy renkulab: 02_advanced/04_admin/07_renkulab.md        
+        - How-to guides: 
+            - 03_howto/index.md
+            - Setup a config.yaml: 03_howto/00_config_yaml.md
+            - Build object: 03_howto/01_build_object.md
+            - Create dataset: 03_howto/02_create_dataset.md
+            - Generate workflow: 03_howto/03_generate_workflow.md
+            - Update object: 03_howto/04_update_object.md
+            - Filter: 03_howto/05_filter.md
+        - Common issues: 
+            - 04_bugs/index.md
+            - Templates project creation: 04_bugs/01_templates.md
+            - Python CLI: 04_bugs/02_python.md
+            - Renku interface: 04_bugs/03_renku_interface.md
+    - News:
+        - 'Releases': 'releases.md'
+        - Events: 
+            - 05_events/index.md
+            - Robinson Hackathons: 05_events/robinsons_hackathons.md
+            - '[BC]2': 
+                - 05_events/BC2/index.md 
+                - 05_events/BC2/step_by_step.md
+                - 05_events/BC2/presentations.md
+                - 05_events/BC2/hands-on_sessions.md
+
+
             
-    - Advanced: 
-        - 02_advanced/index.md
-        - Module contributor: 
-            - 02_advanced/01_module_contr/index.md
-            - The omniObject: 
-                - 02_advanced/01_module_contr/omni_object/index.md
-                - OmniObject: 02_advanced/01_module_contr/omni_object/classes/01_omni_object.md
-                - OmniInput: 02_advanced/01_module_contr/omni_object/classes/02_omni_input.md
-                - OmniParameters: 02_advanced/01_module_contr/omni_object/classes/03_omni_parameter.md
-                - OmniOutput: 02_advanced/01_module_contr/omni_object/classes/04_omni_output.md
-                - OmniCommand: 02_advanced/01_module_contr/omni_object/classes/05_omni_command.md
-                - OmniPlan: 02_advanced/01_module_contr/omni_object/classes/06_omni_plan.md
-        - Benchmarker: 
-            - 02_advanced/02_benchmarker/index.md
-        - Method user: 
-            - 02_advanced/03_method_user/index.md
-        - Administrator:
-            - 02_advanced/04_admin/index.md
-            - Services overview: 02_advanced/04_admin/01_services.md
-            - Start a new benchmark: 02_advanced/04_admin/02_new_benchmark.md
-            - Set up a triplestore: 02_advanced/04_admin/03_triplestore.md
-            - Register a runner: 02_advanced/04_admin/04_runner.md
-            - Serve bettr: 02_advanced/04_admin/05_bettr.md
-            - Serve the dashboard: 02_advanced/04_admin/06_dashboard.md
-            - Deploy renkulab: 02_advanced/04_admin/07_renkulab.md        
-    - How-to guides: 
-        - 03_howto/index.md
-        - Setup a config.yaml: 03_howto/00_config_yaml.md
-        - Build object: 03_howto/01_build_object.md
-        - Create dataset: 03_howto/02_create_dataset.md
-        - Generate workflow: 03_howto/03_generate_workflow.md
-        - Update object: 03_howto/04_update_object.md
-        - Filter: 03_howto/05_filter.md
-    - Common issues: 
-        - 04_bugs/index.md
-        - Templates project creation: 04_bugs/01_templates.md
-        - Python CLI: 04_bugs/02_python.md
-        - Renku interface: 04_bugs/03_renku_interface.md
-    - Events: 
-        - 05_events/index.md
-        - Robinson Hackathons: 05_events/robinsons_hackathons.md
-        - '[BC]2': 
-            - 05_events/BC2/index.md 
-            - 05_events/BC2/step_by_step.md
-            - 05_events/BC2/presentations.md
-            - 05_events/BC2/hands-on_sessions.md
-    - About: about.md
+    
+    
 
 theme:
-    name: material
+    name: mkdocs
     features:
         - navigation.indexes
         - navigation.tabs
