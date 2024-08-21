@@ -1,3 +1,0 @@
-## Issues related to templates and project creation
-
-More to come...
